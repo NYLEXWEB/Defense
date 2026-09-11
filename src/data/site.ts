@@ -43,8 +43,6 @@ export const siteConfig = {
       id: "home",
       title: "Home",
       tagline: "Residential Peace of Mind",
-      description:
-        "Comprehensive surveillance designed for residential villas, apartments, and gated properties to keep families safe.",
       image:
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
     },
@@ -52,8 +50,6 @@ export const siteConfig = {
       id: "office",
       title: "Office",
       tagline: "Corporate & Commercial Security",
-      description:
-        "High-definition surveillance and access control for modern corporate workspaces, server rooms, and commercial facilities.",
       image:
         "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     },
@@ -61,8 +57,6 @@ export const siteConfig = {
       id: "school",
       title: "School",
       tagline: "Educational Campus Protection",
-      description:
-        "Specialized campus monitoring ensuring student safety, perimeter protection, and continuous oversight across academic grounds.",
       image:
         "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80",
     },
@@ -70,8 +64,6 @@ export const siteConfig = {
       id: "bus",
       title: "Bus",
       tagline: "Transit & Fleet Surveillance",
-      description:
-        "Mobile vehicle surveillance systems engineered for school buses and commercial transit to monitor driver behavior and passenger safety.",
       image:
         "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80",
     },

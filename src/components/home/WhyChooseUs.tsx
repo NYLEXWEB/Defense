@@ -1,81 +1,113 @@
-import React from "react";
-import { ShieldCheck, BadgePercent, Wrench, Headphones } from "lucide-react";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+"use client";
 
-const features = [
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { MotionFadeIn, MotionStaggerContainer, MotionStaggerItem } from "@/components/ui/MotionWrapper";
+
+interface FAQItem {
+  id: string;
+  title: string;
+  description: string;
+}
+
+const whyChooseUsData: FAQItem[] = [
   {
-    icon: ShieldCheck,
+    id: "quality-products",
     title: "Quality Products",
-    description: "We offer high-quality CCTV products from reputable brands.",
-    number: "01",
+    description: "We offer high-quality CCTV products from reputable brands",
   },
   {
-    icon: BadgePercent,
+    id: "competitive-prices",
     title: "Competitive Prices",
-    description: "We offer competitive pricing without compromising on quality.",
-    number: "02",
+    description: "We offer competitive pricing without compromising on quality",
   },
   {
-    icon: Wrench,
+    id: "expert-installation",
     title: "Expert Installation",
-    description: "Our team of experts will install and set up your CCTV system.",
-    number: "03",
+    description: "Our team of experts will install and set up your CCTV system",
   },
   {
-    icon: Headphones,
+    id: "exceptional-customer-service",
     title: "Exceptional Customer Service",
-    description: "We provide dedicated customer support and service.",
-    number: "04",
+    description: "We provide dedicated customer support and service",
   },
 ];
 
 export function WhyChooseUs() {
+  const [openItems, setOpenItems] = useState<Record<string, boolean>>({
+    "quality-products": true,
+    "competitive-prices": true,
+    "expert-installation": true,
+    "exceptional-customer-service": true,
+  });
+
+  const toggleItem = (id: string) => {
+    setOpenItems((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Why Choose Us"
-          title="The foundation of our client trust."
-          subtitle="Committed to technological excellence, reliable installations, and continuous post-setup support."
-          centered
-          className="mb-16"
-        />
+    <section id="why-choose-us" className="py-16 md:py-24 bg-white border-b border-neutral-200/70 overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Solid Green Rectangular Banner */}
+        <MotionFadeIn delay={0.1}>
+          <div className="inline-block bg-[#00C689] px-6 py-2.5 sm:px-7 sm:py-3 mb-8 shadow-sm">
+            <span className="text-white font-extrabold uppercase tracking-wider text-base sm:text-lg md:text-xl block">
+              WHY CHOOSE US
+            </span>
+          </div>
+        </MotionFadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((item) => {
-            const Icon = item.icon;
+        {/* Clean, Normal List with Dropdown Arrow Icon */}
+        <MotionStaggerContainer className="space-y-4 max-w-4xl" staggerDelay={0.08}>
+          {whyChooseUsData.map((item) => {
+            const isOpen = !!openItems[item.id];
+
             return (
-              <div
-                key={item.title}
-                className="relative rounded-3xl bg-[#F8FAF9] p-8 border border-neutral-200/80 hover:border-[#00C689] hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#008D62] shadow-sm border border-neutral-200/70 group-hover:bg-[#00C689] group-hover:text-[#06221a] transition-colors">
-                      <Icon className="w-6 h-6" />
+              <MotionStaggerItem key={item.id}>
+                <div
+                  className="py-3 border-b border-neutral-200/70 last:border-b-0 transition-colors"
+                >
+                  {/* Clickable Header with Bullet and Arrow */}
+                  <button
+                    type="button"
+                    onClick={() => toggleItem(item.id)}
+                    className="w-full flex items-center justify-between gap-4 text-left py-1.5 group focus:outline-none cursor-pointer"
+                    aria-expanded={isOpen}
+                  >
+                    <div className="flex items-start gap-3">
+                      <span className="text-xl sm:text-2xl leading-none text-[#222524] select-none font-bold mt-0.5">
+                        •
+                      </span>
+                      <span className="text-base sm:text-lg md:text-xl font-bold text-[#222524] group-hover:text-[#008D62] transition-colors">
+                        {item.title}
+                      </span>
                     </div>
-                    <span className="text-xl font-bold font-mono text-neutral-300 group-hover:text-[#00C689] transition-colors">
-                      {item.number}
-                    </span>
-                  </div>
 
-                  <h3 className="text-lg font-bold text-[#222524] mb-2.5">
-                    {item.title}
-                  </h3>
+                    {/* Dropdown Arrow */}
+                    <div className="flex items-center justify-center p-1 text-neutral-400 group-hover:text-[#008D62] transition-colors">
+                      <ChevronDown
+                        className={`w-5 h-5 transition-transform duration-300 ${
+                          isOpen ? "rotate-180 text-[#008D62]" : ""
+                        }`}
+                      />
+                    </div>
+                  </button>
 
-                  <p className="text-xs sm:text-sm text-[#555c59] leading-relaxed">
-                    {item.description}
-                  </p>
+                  {/* Dropdown Answer Content */}
+                  {isOpen && (
+                    <div className="pl-6 sm:pl-7 pt-1.5 pb-2 text-sm sm:text-base md:text-lg text-[#555c59] leading-relaxed animate-in fade-in duration-200">
+                      <span className="text-neutral-400 font-semibold mr-1.5">:</span>
+                      {item.description}
+                    </div>
+                  )}
                 </div>
-
-                <div className="pt-6 mt-6 border-t border-neutral-200/60 flex items-center gap-2 text-xs font-semibold text-[#008D62]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
-                  <span>Defense Assurance</span>
-                </div>
-              </div>
+              </MotionStaggerItem>
             );
           })}
-        </div>
+        </MotionStaggerContainer>
       </div>
     </section>
   );

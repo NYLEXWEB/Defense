@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Phone, MapPin, Shield,ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import { Phone, MapPin, Shield, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -12,21 +13,16 @@ export function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center gap-2.5 group"
+              className="inline-flex items-center group"
               aria-label="Defense Security Systems Homepage"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#00C689] flex items-center justify-center text-[#06221a] font-bold shadow-sm">
-                <Shield className="w-5 h-5 text-[#06221a]" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight text-white leading-tight flex items-center gap-1">
-                  DEFENSE
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
-                </span>
-                <span className="text-[10px] uppercase font-semibold tracking-wider text-neutral-300">
-                  Security & Surveillance
-                </span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Defense Security & Surveillance"
+                width={170}
+                height={55}
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
             </Link>
 
             <p className="text-sm text-neutral-300 leading-relaxed max-w-sm">

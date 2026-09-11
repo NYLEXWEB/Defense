@@ -143,12 +143,9 @@ export default function AboutPage() {
 
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-lg font-bold text-[#222524] mb-2">
+                    <h3 className="text-lg font-bold text-[#222524]">
                       {sector.tagline}
                     </h3>
-                    <p className="text-xs text-[#555c59] leading-relaxed">
-                      {sector.description}
-                    </p>
                   </div>
                 </div>
               </div>

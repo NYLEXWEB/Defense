@@ -1,70 +1,198 @@
+"use client";
+
 import React from "react";
-import Link from "next/link";
-import { ArrowRight, ShieldCheck } from "lucide-react";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { expertiseData } from "@/data/expertise";
+import { MotionFadeIn, MotionStaggerContainer, MotionStaggerItem } from "@/components/ui/MotionWrapper";
+
+// Crisp SVG Icons matching brochure style
+export function MonitoringIcon({ className = "w-10 h-10 text-white shrink-0" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* 4 Monitors grid */}
+      <rect x="6" y="6" width="16" height="11" rx="1.5" />
+      <rect x="26" y="6" width="16" height="11" rx="1.5" />
+      <rect x="6" y="20" width="16" height="11" rx="1.5" />
+      <rect x="26" y="20" width="16" height="11" rx="1.5" />
+      {/* Operator silhouette */}
+      <circle cx="24" cy="33" r="3.5" fill="currentColor" />
+      <path d="M16 43 C16 38.5, 19.5 37, 24 37 C28.5 37, 32 38.5, 32 43 Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function IncidentIcon({ className = "w-10 h-10 text-white shrink-0" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* Document */}
+      <rect x="10" y="10" width="22" height="32" rx="2" />
+      <line x1="16" y1="20" x2="26" y2="20" />
+      <line x1="16" y1="26" x2="26" y2="26" />
+      <line x1="16" y1="32" x2="22" y2="32" />
+      {/* Pen on left */}
+      <path d="M6 24 L6 38 L10 38" />
+      <path d="M6 24 L8 20 L10 24" />
+      {/* Shield on top right */}
+      <g transform="translate(24, 4)">
+        <path d="M12 0 C12 0, 4 3, 4 3 L4 10 C4 15, 8 19, 12 21 C16 19, 20 15, 20 10 L20 3 C20 3, 12 0, 12 0 Z" fill="#00C689" stroke="white" strokeWidth="2.2" />
+        <line x1="12" y1="6" x2="12" y2="12" stroke="white" strokeWidth="2" />
+        <circle cx="12" cy="15" r="1" fill="white" />
+      </g>
+    </svg>
+  );
+}
+
+export function AccessControlIcon({ className = "w-10 h-10 text-white shrink-0" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* Outer circle */}
+      <circle cx="24" cy="24" r="19" />
+      {/* Shield */}
+      <path d="M24 11 C24 11, 16 14, 16 14 L16 22 C16 27.5, 19.5 32, 24 34 C28.5 32, 32 27.5, 32 22 L32 14 C32 14, 24 11, 24 11 Z" />
+      {/* Keyhole */}
+      <circle cx="24" cy="20" r="2.2" fill="currentColor" />
+      <path d="M23 21.5 L25 21.5 L25.5 26.5 L22.5 26.5 Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function OperatorsIcon({ className = "w-10 h-10 text-white shrink-0" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* Worker head with helmet */}
+      <circle cx="19" cy="16" r="5" />
+      <path d="M12 14 C12 9.5, 15 7.5, 19 7.5 C23 7.5, 26 9.5, 26 14 Z" fill="currentColor" />
+      {/* Hard hat rim */}
+      <line x1="10" y1="14" x2="28" y2="14" strokeWidth="2.8" />
+      {/* Body / shoulders */}
+      <path d="M10 34 C10 27, 14 25, 19 25 C21.5 25, 24 26, 26 27.5" />
+      {/* Gear on right */}
+      <g transform="translate(25, 18)">
+        <circle cx="9" cy="9" r="4.5" strokeWidth="2" />
+        <path d="M9 2 L9 4.5 M9 13.5 L9 16 M2 9 L4.5 9 M13.5 9 L16 9 M4 4 L5.8 5.8 M12.2 12.2 L14 14 M4 14 L5.8 12.2 M12.2 5.8 L14 4" strokeWidth="1.8" />
+      </g>
+      {/* Screwdriver tool */}
+      <path d="M8 36 L26 36" strokeWidth="2.5" />
+    </svg>
+  );
+}
+
+export function AdvancedTechIcon({ className = "w-10 h-10 text-white shrink-0" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* Center lock in circle */}
+      <circle cx="24" cy="24" r="10" />
+      <rect x="20.5" y="23" width="7" height="5.5" rx="1" fill="currentColor" />
+      <path d="M22 23 V20.5 C22 19.4 22.9 18.5 24 18.5 C25.1 18.5 26 19.4 26 20.5 V23" strokeWidth="1.8" />
+      {/* Connected nodes */}
+      <line x1="24" y1="14" x2="24" y2="8" />
+      <circle cx="24" cy="6" r="2.5" />
+      <line x1="24" y1="34" x2="24" y2="40" />
+      <circle cx="24" cy="42" r="2.5" />
+      <line x1="14" y1="24" x2="8" y2="24" />
+      <circle cx="6" cy="24" r="2.5" />
+      <line x1="34" y1="24" x2="40" y2="24" />
+      <circle cx="42" cy="24" r="2.5" />
+      {/* Diagonal nodes */}
+      <line x1="17" y1="17" x2="12" y2="12" />
+      <circle cx="10" cy="10" r="2" />
+      <line x1="31" y1="31" x2="36" y2="36" />
+      <circle cx="38" cy="38" r="2" />
+    </svg>
+  );
+}
+
+export function RiskAssessmentIcon({ className = "w-10 h-10 text-white shrink-0" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* Document */}
+      <rect x="10" y="6" width="20" height="32" rx="2" />
+      <text x="12" y="18" fontFamily="'Arial Black', sans-serif" fontSize="6.5" fontWeight="bold" fill="currentColor" stroke="none">
+        RISK
+      </text>
+      <line x1="12" y1="23" x2="24" y2="23" strokeWidth="2" />
+      <line x1="12" y1="28" x2="22" y2="28" strokeWidth="2" />
+      {/* Magnifying Glass on bottom-right */}
+      <circle cx="28" cy="30" r="6.5" strokeWidth="2.3" fill="#00C689" />
+      <line x1="33" y1="35" x2="40" y2="42" strokeWidth="3" />
+    </svg>
+  );
+}
 
 export function ExpertiseSection() {
   return (
-    <section className="py-20 md:py-28 bg-dark-anchor text-white relative overflow-hidden">
-      {/* Decorative Glow */}
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#00C689]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#008D62]/15 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-14 sm:py-18 bg-[#EDF1EF] overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        {/* Signature Emerald Green Card with Asymmetrical Rounded Corners & Luxury Motion Reveal */}
+        <MotionFadeIn delay={0.1} distance={20} duration={0.8}>
+          <div className="bg-[#00C689] rounded-tl-[36px] sm:rounded-tl-[48px] rounded-br-[36px] sm:rounded-br-[48px] rounded-tr-xl rounded-bl-xl p-6 sm:p-10 md:p-12 shadow-md hover:shadow-xl transition-shadow duration-400">
+            {/* Header */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-wider text-center text-white mb-8 sm:mb-10 font-sans">
+              OUR EXPERTISE
+            </h2>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-          <SectionHeading
-            badge="Technical Mastery"
-            title="Specialized expertise in advanced security protocols."
-            subtitle="Engineered surveillance, perimeter command, and continuous operational intelligence."
-            dark
-          />
-          <Link
-            href="/expertise"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#00C689] hover:underline self-start md:self-end group"
-          >
-            <span>Explore Complete Capabilities</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-
-        {/* 6 Expertise Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {expertiseData.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 hover:border-[#00C689]/60 hover:bg-white/10 transition-all duration-300 flex flex-col justify-between group"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-3xl font-extrabold font-mono text-[#00C689]/50 group-hover:text-[#00C689] transition-colors">
-                    {item.number}
+            {/* 6 Capabilities Grid (2 columns) with Staggered Entrance */}
+            <MotionStaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-y-6 sm:gap-y-8 gap-x-8 sm:gap-x-12" staggerDelay={0.07}>
+              {/* 1. 24/7 Monitoring & Surveillance */}
+              <MotionStaggerItem>
+                <div className="flex items-center gap-4 group">
+                  <MonitoringIcon className="w-10 h-10 sm:w-11 sm:h-11 text-white shrink-0 group-hover:scale-105 transition-transform duration-300" />
+                  <span className="text-base sm:text-lg font-bold text-white leading-tight">
+                    24/7 Monitoring &amp; Surveillance
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-[#00C689]/20 flex items-center justify-center text-[#00C689]">
-                    <ShieldCheck className="w-4 h-4" />
-                  </div>
                 </div>
+              </MotionStaggerItem>
 
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {item.title}
-                </h3>
+              {/* 4. Highly Skilled CCTV Operators */}
+              <MotionStaggerItem>
+                <div className="flex items-center gap-4 group">
+                  <OperatorsIcon className="w-10 h-10 sm:w-11 sm:h-11 text-white shrink-0 group-hover:scale-105 transition-transform duration-300" />
+                  <span className="text-base sm:text-lg font-bold text-white leading-tight">
+                    Highly Skilled CCTV Operators
+                  </span>
+                </div>
+              </MotionStaggerItem>
 
-                <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-6">
-                  {item.description}
-                </p>
-              </div>
+              {/* 2. Incident Response & Reporting */}
+              <MotionStaggerItem>
+                <div className="flex items-center gap-4 group">
+                  <IncidentIcon className="w-10 h-10 sm:w-11 sm:h-11 text-white shrink-0 group-hover:scale-105 transition-transform duration-300" />
+                  <span className="text-base sm:text-lg font-bold text-white leading-tight">
+                    Incident Response &amp; Reporting
+                  </span>
+                </div>
+              </MotionStaggerItem>
 
-              <div className="pt-4 border-t border-white/10 space-y-1.5">
-                {item.scope.slice(0, 2).map((s) => (
-                  <div key={s} className="flex items-center gap-2 text-xs text-neutral-300">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
-                    <span>{s}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+              {/* 5. Advanced Security Technology */}
+              <MotionStaggerItem>
+                <div className="flex items-center gap-4 group">
+                  <AdvancedTechIcon className="w-10 h-10 sm:w-11 sm:h-11 text-white shrink-0 group-hover:scale-105 transition-transform duration-300" />
+                  <span className="text-base sm:text-lg font-bold text-white leading-tight">
+                    Advanced Security Technology
+                  </span>
+                </div>
+              </MotionStaggerItem>
+
+              {/* 3. Access Control & Perimeter Security */}
+              <MotionStaggerItem>
+                <div className="flex items-center gap-4 group">
+                  <AccessControlIcon className="w-10 h-10 sm:w-11 sm:h-11 text-white shrink-0 group-hover:scale-105 transition-transform duration-300" />
+                  <span className="text-base sm:text-lg font-bold text-white leading-tight">
+                    Access Control &amp; Perimeter Security
+                  </span>
+                </div>
+              </MotionStaggerItem>
+
+              {/* 6. Risk Assessment & Security Consultation */}
+              <MotionStaggerItem>
+                <div className="flex items-center gap-4 group">
+                  <RiskAssessmentIcon className="w-10 h-10 sm:w-11 sm:h-11 text-white shrink-0 group-hover:scale-105 transition-transform duration-300" />
+                  <span className="text-base sm:text-lg font-bold text-white leading-tight">
+                    Risk Assessment &amp; Security Consultation
+                  </span>
+                </div>
+              </MotionStaggerItem>
+            </MotionStaggerContainer>
+          </div>
+        </MotionFadeIn>
       </div>
     </section>
   );

@@ -2,10 +2,12 @@ export interface ReviewItem {
   id: string;
   name: string;
   initials: string;
-  role: string;
+  avatarBg: string;
+  badge: string;
+  timeAgo: string;
   rating: number;
   highlight: string;
-  fullReview: string[];
+  fullReview: string;
 }
 
 export const reviewsData: ReviewItem[] = [
@@ -13,36 +15,48 @@ export const reviewsData: ReviewItem[] = [
     id: "rajesh-k",
     name: "Rajesh K",
     initials: "R",
-    role: "Homeowner, Residential Installation",
+    avatarBg: "#1A73E8", // Google Blue
+    badge: "Local Guide • 14 reviews",
+    timeAgo: "2 months ago",
     rating: 5,
     highlight: "Installation occurring the very next day after our initial contact. Wiring was installed flawlessly.",
-    fullReview: [
-      "Excellent service from the start..I am really happy to express my satisfaction with the recent CCTV installation service provided at my home by defense security system teams. The response time from defense team was remarkably fast, with installation occurring the very next day after our initial contact.",
-      "The wiring was installed flawlessly, and the connection was executed in a highly professional manner. I was particularly impressed by the quality of the cameras used, which have exceeded my expectations. It is commendable how your experienced team handled the entire process, ensuring that everything was set up to the highest standards",
-      "I appreciate how well the workings of the CCTV cameras were explained to me, ensuring that I am fully aware of their functionalities. Thanks Mr.Gokul and team for your excellent service and commitment. I will gladly recommend your services to friends and others who may require similar installations in the future.",
-    ],
+    fullReview:
+      "Excellent service from the start. I am really happy to express my satisfaction with the recent CCTV installation service provided at my home by Defense Security Systems team. The response time was remarkably fast, with installation occurring the very next day after our initial contact. The wiring was installed flawlessly and the connection was executed in a highly professional manner. Highly recommend Mr. Gokul and team!",
   },
   {
     id: "hari-sankar",
     name: "Hari Sankar",
-    initials: "HS",
-    role: "Homeowner, AI IP Surveillance",
+    initials: "H",
+    avatarBg: "#E37400", // Google Orange
+    badge: "Verified Customer • Kollam",
+    timeAgo: "4 months ago",
     rating: 5,
-    highlight: "Mr Gokul is a sincere and humble person, well versed in the latest technologies like Hikvision AcuSense with AI.",
-    fullReview: [
-      "I came across Defense Security when I was planning to install CCTV surveillance system at my home. While speaking to Mr Gokul, I realised that he is a sincere and humble person, who is very well versed in the latest technologies in the CCTV industry and in fact he even took the extra effort to enquire and learn more about Hikvision acusense IP camera surveillance system with AI capabilities, which was not widely used locally. This convinced me to choose the Defense Security team to install the system at my home.",
-      "The system was installed and configured within 2 days (including all structural work) and I just had to sit back and relax since the highly capable team planned everything really well from top to bottom for the installation. I would wholeheartedly recommend the services of the Defense Security team to anyone who is planning to install any state-of-the-art CCTV system for home use.",
-    ],
+    highlight: "Mr Gokul is well versed in the latest technologies like Hikvision AcuSense with AI capabilities.",
+    fullReview:
+      "I came across Defense Security when planning to install CCTV at my home. Mr Gokul is very well versed in the latest technologies in the industry, including Hikvision AcuSense IP cameras with AI capabilities. The system was installed and configured within 2 days with flawless structural work. I wholeheartedly recommend them to anyone!",
   },
   {
     id: "rahulkrishnan-nr",
     name: "Rahulkrishnan NR",
     initials: "R",
-    role: "Verified Client",
+    avatarBg: "#1E8E3E", // Google Green
+    badge: "Local Guide • 8 reviews",
+    timeAgo: "6 months ago",
     rating: 5,
-    highlight: "Very smooth interaction with Gokul and team. Excellent know-how of technology and helped arrange broadband on short notice.",
-    fullReview: [
-      "I recommend this team from my personal experience. It was a very smooth interaction with Gokul and the team from my initial enquiry through the execution. Their excellent know-how of the technology and the choices presented will help you decide the best-suited option. They have also helped me arrange broadband internet on short notice and coordinated well with them. Overall, engaging with the Defense team was a very good experience.",
-    ],
+    highlight: "Very smooth interaction with Gokul and team. Excellent know-how of technology and helped arrange broadband.",
+    fullReview:
+      "I recommend this team from personal experience. Very smooth interaction with Gokul and the team from enquiry through execution. Their excellent know-how of technology helped us decide the best-suited option. They even helped arrange broadband on short notice. Truly 5-star experience!",
+  },
+  {
+    id: "anandhu-m",
+    name: "Anandhu Mohan",
+    initials: "A",
+    avatarBg: "#8430CE", // Google Purple
+    badge: "Verified Customer • Thevally",
+    timeAgo: "1 month ago",
+    rating: 5,
+    highlight: "Prompt support and neat camera positioning for complete 360 blind-spot coverage.",
+    fullReview:
+      "Great experience with Defense Security. The team arrived on time, conducted a thorough site survey, and suggested the exact camera placements to eliminate blind spots. Neat cabling, clean finish, and the mobile app setup was seamless. Outstanding service in Kollam!",
   },
 ];
