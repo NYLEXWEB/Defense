@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-defense-primary: #00C689;
+  --color-defense-dark: #008D62;
+  --color-defense-deep: #00956B;
+  --color-defense-deep-dark: #06221a;
+  --color-defense-charcoal: #111815;
+  --color-defense-light-grey: #D6D6D6;
+  --color-defense-subtle: #F8FAF9;
+  --color-defense-card: #FFFFFF;
+  --color-defense-border: #E5E7EB;
+  --color-defense-text: #222524;
+  --color-defense-secondary: #555c59;
+  --color-defense-muted: #838b88;
+}
+
+:root {
+  --brand-green: #00C689;
+  --brand-green-dark: #008D62;
+  --brand-deep: #00956B;
+  --brand-bg-subtle: #F8FAF9;
+  --brand-border: #E5E7EB;
+  --brand-text: #222524;
+  --brand-muted: #666e6b;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FFFFFF;
+  color: #222524;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle dot texture for premium feel */
+.bg-grid-subtle {
+  background-image: radial-gradient(#00C689 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+.bg-radial-gradient-hero {
+  background: radial-gradient(circle at 80% 20%, rgba(0, 198, 137, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.bg-dark-anchor {
+  background: radial-gradient(circle at 10% 20%, rgba(0, 198, 137, 0.12) 0%, transparent 50%),
+              linear-gradient(135deg, #06221a 0%, #03130e 100%);
+}
+
+/* Text balance and typography utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f3f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #c2cbc7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00C689;
+}
+
+/* Smooth motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
