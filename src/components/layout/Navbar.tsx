@@ -22,11 +22,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
-
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setMobileMenuOpen(false);
@@ -82,7 +77,7 @@ export function Navbar() {
                     className={clsx(
                       "px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 nav-link-animated",
                       isActive
-                        ? "bg-white text-[#008D62] shadow-xs font-bold active"
+                        ? "bg-white text-[#008D62] shadow-xs font-bold "
                         : "text-[#555c59] hover:text-[#222524] hover:bg-white/50"
                     )}
                   >

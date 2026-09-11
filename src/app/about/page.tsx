@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Shield, Target, Compass, ArrowRight, Home, Building, GraduationCap, Bus, CheckCircle2 } from "lucide-react";
+import { Target, Compass, ArrowRight, Home, Building, GraduationCap, Bus, CheckCircle2 } from "lucide-react";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/data/site";

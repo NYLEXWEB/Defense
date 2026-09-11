@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, MapPin, Shield, ArrowUpRight } from "lucide-react";
+import { Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 
 export function Footer() {

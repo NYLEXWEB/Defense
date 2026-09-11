@@ -2,7 +2,6 @@ import React from "react";
 import { Metadata } from "next";
 import { ProductsPreview } from "@/components/home/ProductsPreview";
 import { FinalCTA } from "@/components/home/FinalCTA";
-import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Our Products & Security Portfolio | Defense Security Systems",
