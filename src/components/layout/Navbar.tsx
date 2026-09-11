@@ -88,17 +88,17 @@ export function Navbar() {
             </nav>
 
             {/* Right Action: Phone CTA */}
-            <div className="hidden sm:flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-1.5 bg-neutral-100/80 p-1.5 rounded-full border border-neutral-200/80 backdrop-blur-sm shadow-xs">
               <a
                 href={`tel:${siteConfig.phones[0].raw}`}
-                className="flex items-center gap-2 text-xs font-medium text-[#555c59] hover:text-[#008D62] transition-colors duration-300 px-3 py-2 rounded-full hover:bg-neutral-100"
+                className="flex items-center gap-2 text-xs font-semibold text-[#222524] hover:text-[#008D62] transition-colors duration-300 px-3 py-1.5 rounded-full hover:bg-white/60"
               >
-                <Phone className="w-3.5 h-3.5 text-[#00C689]" />
-                <span>{siteConfig.phones[0].display}</span>
+                <Phone className="w-3.5 h-3.5 text-[#00C689] shrink-0" />
+                <span className="whitespace-nowrap">{siteConfig.phones[0].display}</span>
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-[#06221a] text-white hover:bg-[#003828] border border-[#00C689]/30 hover:border-[#00C689] transition-all duration-300 shadow-sm shine-btn hover:-translate-y-0.5"
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-[#06221a] text-white hover:bg-[#003828] border border-[#00C689]/30 hover:border-[#00C689] transition-all duration-300 shadow-xs shine-btn whitespace-nowrap"
               >
                 <span>Enquire</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-[#00C689]" />
