@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Phone, MapPin, Shield, Instagram, Facebook, ArrowUpRight } from "lucide-react";
+import { Phone, MapPin, Shield,ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -41,7 +41,7 @@ export function Footer() {
                 className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-[#00C689] hover:border-[#00C689]/40 hover:bg-white/10 transition-colors"
                 aria-label="Instagram profile"
               >
-                <Instagram className="w-4 h-4" />
+             
               </a>
               <a
                 href={siteConfig.socials.facebook}
@@ -50,7 +50,7 @@ export function Footer() {
                 className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-[#00C689] hover:border-[#00C689]/40 hover:bg-white/10 transition-colors"
                 aria-label="Facebook profile"
               >
-                <Facebook className="w-4 h-4" />
+               
               </a>
               <span className="text-xs text-neutral-400 font-mono">
                 @{siteConfig.socials.handle}
