@@ -1,34 +1,40 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, X } from "lucide-react";
 import { MotionFadeIn } from "@/components/ui/MotionWrapper";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function WhoWeAre() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-16 md:py-24 bg-[#F8FAF9] border-y border-neutral-200/70 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Visual Image Block */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: Premium Edge-to-Edge Visual Card (Click to Expand) */}
           <MotionFadeIn className="lg:col-span-5" delay={0.1}>
-            <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[14/10] border border-neutral-200 bg-neutral-900 group">
-              <Image
-                src="/images/why-choose-us.jpg"
-                alt="Defense Security System Installation in Kollam"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#06221a]/85 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#00C689] text-[#06221a]">
-                  Based in Thevally, Kollam
-                </span>
-                <p className="text-sm font-bold text-white pt-1">
-                  Your Safety. Our Responsibility.
-                </p>
+            <div className="relative group">
+              {/* Subtle Emerald Ambient Backlight Glow */}
+              <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-tr from-[#00C689]/40 via-[#008D62]/20 to-transparent blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+              {/* Edge-to-Edge Image Card (1:1 Aspect Ratio matching the flyer) */}
+              <div
+                onClick={() => setIsModalOpen(true)}
+                className="relative rounded-3xl overflow-hidden bg-[#06221a] border border-[#00C689]/30 shadow-2xl cursor-pointer aspect-square w-full transition-transform duration-500 group-hover:-translate-y-1"
+              >
+                <Image
+                  src="/About/IMG-20250103-WA0105.jpg"
+                  alt="Defense Security & Surveillance Services Kollam"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+
+               
               </div>
             </div>
           </MotionFadeIn>
@@ -37,12 +43,12 @@ export function WhoWeAre() {
           <MotionFadeIn className="lg:col-span-7 space-y-6" delay={0.2}>
             {/* Rectangular Emerald Badge */}
             <div className="inline-block bg-[#00C689] px-6 py-2.5 shadow-sm">
-              <span className="text-white font-extrabold uppercase tracking-wider text-sm sm:text-base block">
+              <span className="text-white font-extrabold uppercase tracking-wider text-sm sm:text-base block font-heading">
                 ABOUT DEFENSE SECURITY
               </span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#222524] leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#222524] leading-tight font-heading">
               Smart Security. Reliable Protection.
             </h2>
 
@@ -93,6 +99,43 @@ export function WhoWeAre() {
           </MotionFadeIn>
         </div>
       </div>
+
+      {/* Lightbox Pop-up Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsModalOpen(false)}
+            className="fixed inset-0 z-[120] bg-black/90 backdrop-blur-md p-4 sm:p-8 flex items-center justify-center"
+          >
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 z-30 p-3 rounded-full bg-black/60 text-white hover:bg-[#00C689] hover:text-[#06221a] transition-all cursor-pointer shadow-lg"
+                aria-label="Close image popup"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              <div className="relative w-full h-full max-h-[85vh] rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/About/IMG-20250103-WA0105.jpg"
+                  alt="Defense Security Official Flyer Full View"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

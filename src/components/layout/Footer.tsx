@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -34,19 +35,19 @@ export function Footer() {
                 href={siteConfig.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-[#00C689] hover:border-[#00C689]/40 hover:bg-white/10 transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-white hover:text-[#00C689] hover:border-[#00C689]/60 hover:bg-[#00C689]/20 transition-all duration-300 shadow-sm hover:scale-105"
                 aria-label="Instagram profile"
               >
-             
+                <FaInstagram className="w-4 h-4 text-white hover:text-[#00C689] transition-colors" />
               </a>
               <a
                 href={siteConfig.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-[#00C689] hover:border-[#00C689]/40 hover:bg-white/10 transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-white hover:text-[#00C689] hover:border-[#00C689]/60 hover:bg-[#00C689]/20 transition-all duration-300 shadow-sm hover:scale-105"
                 aria-label="Facebook profile"
               >
-               
+                <FaFacebookF className="w-4 h-4 text-white hover:text-[#00C689] transition-colors" />
               </a>
               <span className="text-xs text-neutral-400 font-mono">
                 @{siteConfig.socials.handle}

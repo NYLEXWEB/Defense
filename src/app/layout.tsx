@@ -3,6 +3,7 @@ import { Bebas_Neue, Poppins } from "next/font/google";
 import { siteConfig } from "@/data/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingActions } from "@/components/layout/FloatingActions";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );

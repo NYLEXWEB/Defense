@@ -84,22 +84,17 @@ export default function AboutPage() {
 
             {/* Right Visual Composition */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/5] border border-neutral-200 bg-neutral-900 group">
-                <Image
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
-                  alt="Defense Security Certified Technical Installation"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#06221a]/90 via-black/30 to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8 text-white space-y-2">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#00C689] text-[#06221a]">
-                    Precision Craftsmanship
-                  </span>
-                  <p className="text-sm text-neutral-200">
-                    Engineered with verified international partner hardware from Hikvision, Dahua, CP PLUS, and Honeywell.
-                  </p>
+              <div className="relative group">
+                <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-tr from-[#00C689]/40 via-[#008D62]/20 to-transparent blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square w-full border border-[#00C689]/30 bg-[#06221a] flex items-center justify-center">
+                  <Image
+                    src="/About/IMG-20250103-WA0105.jpg"
+                    alt="Defense Security & Surveillance Services Kollam"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    priority
+                  />
                 </div>
               </div>
             </div>
