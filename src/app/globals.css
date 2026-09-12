@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-cormorant: var(--font-cormorant), "Cormorant Garamond", Garamond, Georgia, serif;
+  --font-sans: var(--font-poppins), Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-bebas: var(--font-bebas), "Bebas Neue", sans-serif;
+  --font-poppins: var(--font-poppins), Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --color-defense-primary: #00C689;
   --color-defense-dark: #008D62;
@@ -32,13 +33,11 @@
 html {
   scroll-behavior: smooth;
   color-scheme: light;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: -0.012em;
+  font-family: var(--font-poppins), Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: -0.012em;
+  font-family: var(--font-poppins), Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #FFFFFF;
   color: #222524;
   overflow-x: hidden;
@@ -47,9 +46,9 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1, h2 {
-  font-family: var(--font-cormorant), "Cormorant Garamond", Garamond, Georgia, serif !important;
-  letter-spacing: -0.01em;
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-bebas), "Bebas Neue", sans-serif !important;
+  letter-spacing: 0.02em;
 }
 
 /* Subtle dot texture for premium feel */

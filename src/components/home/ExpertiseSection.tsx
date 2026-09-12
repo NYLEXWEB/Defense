@@ -125,7 +125,7 @@ export function ExpertiseSection() {
         <MotionFadeIn delay={0.1} distance={20} duration={0.8}>
           <div className="bg-[#00C689] rounded-tl-[36px] sm:rounded-tl-[48px] rounded-br-[36px] sm:rounded-br-[48px] rounded-tr-xl rounded-bl-xl p-6 sm:p-10 md:p-12 shadow-md hover:shadow-xl transition-shadow duration-400">
             {/* Header */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-wider text-center text-white mb-8 sm:mb-10 font-sans">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-wider text-center text-white mb-8 sm:mb-10">
               OUR EXPERTISE
             </h2>
 

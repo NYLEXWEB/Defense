@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
+import { Bebas_Neue, Poppins } from "next/font/google";
 import { siteConfig } from "@/data/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const bebasNeue = Bebas_Neue({
+  weight: "400",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-bebas",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -23,7 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`h-full antialiased font-sans ${cormorantGaramond.variable}`}>
+    <html
+      lang="en"
+      className={`h-full antialiased ${bebasNeue.variable} ${poppins.variable}`}
+    >
       <body className="min-h-full flex flex-col font-sans bg-white text-[#222524]">
         <Navbar />
         <main className="flex-1">{children}</main>
@@ -32,4 +42,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
