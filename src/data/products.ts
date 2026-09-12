@@ -8,25 +8,11 @@ export interface ProductItem {
 
 export const productsData: ProductItem[] = [
   {
-    id: "wifi-camera",
-    name: "WIFI CAMERA",
-    description: "WiFi cameras provide wireless security",
-    image: "/images/products/wifi-camera.jpg",
-    whatsappMessage: "Hi Defense Security, I am interested in WiFi Camera solutions. Please share pricing and details.",
-  },
-  {
-    id: "cctv-ip-hd",
-    name: "CCTV Cameras IP & HD",
-    description: "Indoor, outdoor, dome, bullet, and PTZ cameras",
+    id: "cctv-surveillance-systems",
+    name: "CCTV Cameras, WiFi Cameras & DVR / NVR Systems",
+    description: "Indoor & outdoor IP/HD cameras, wireless WiFi smart cameras, and digital DVR/NVR video recorders for complete premises surveillance.",
     image: "/images/products/cctv-ip-hd.jpg",
-    whatsappMessage: "Hi Defense Security, I am interested in CCTV Cameras IP & HD systems. Please share pricing and details.",
-  },
-  {
-    id: "dvr-nvr",
-    name: "DVR and NVR",
-    description: "Digital video recorders\nNetwork video recorders",
-    image: "/images/products/dvr-nvr.jpg",
-    whatsappMessage: "Hi Defense Security, I am interested in DVR and NVR recording units. Please share pricing and details.",
+    whatsappMessage: "Hi Defense Security, I am interested in CCTV Cameras, WiFi Cameras, and DVR/NVR Surveillance Systems. Please share pricing and details.",
   },
   {
     id: "video-door-phones",
@@ -64,4 +50,3 @@ export const productsData: ProductItem[] = [
     whatsappMessage: "Hi Defense Security, I am interested in Smart Home Automation solutions. Please share pricing and details.",
   },
 ];
-
