@@ -11,7 +11,7 @@ export const productsData: ProductItem[] = [
     id: "cctv-surveillance-systems",
     name: "CCTV Cameras, WiFi Cameras & DVR / NVR Systems",
     description: "Indoor & outdoor IP/HD cameras, wireless WiFi smart cameras, and digital DVR/NVR video recorders for complete premises surveillance.",
-    image: "/images/products/cctv-ip-hd.jpg",
+    image: "/images/products/cctv-ip-hd.png",
     whatsappMessage: "Hi Defense Security, I am interested in CCTV Cameras, WiFi Cameras, and DVR/NVR Surveillance Systems. Please share pricing and details.",
   },
   {
