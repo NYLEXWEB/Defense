@@ -5,6 +5,7 @@ import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { PartnerBrands } from "@/components/home/PartnerBrands";
 import { ExpertiseSection } from "@/components/home/ExpertiseSection";
+import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { ReviewsPreview } from "@/components/home/ReviewsPreview";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <PartnerBrands />
       <ExpertiseSection />
+      <GalleryPreview />
       <ReviewsPreview />
       <FinalCTA />
     </div>
