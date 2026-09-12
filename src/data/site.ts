@@ -12,7 +12,6 @@ export const siteConfig = {
   location: "Thevally, Kollam, Kerala, India",
   phones: [
     { display: "+91 7025 552 265", raw: "+917025552265" },
-    { display: "+91 8848 985 708", raw: "+918848985708" },
   ],
   socials: {
     instagram: "https://instagram.com/defense_security_kollam",
