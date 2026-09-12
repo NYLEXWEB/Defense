@@ -3,8 +3,8 @@
 import React from "react";
 import { MotionFadeIn, MotionStaggerContainer, MotionStaggerItem } from "@/components/ui/MotionWrapper";
 
-// 1. Hikvision Official Logo (Red HIK + Charcoal VISION with official slant & cuts)
-export function HikvisionLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: string }) {
+// 1. Hikvision Official Vector Logo (Red HIK + Charcoal VISION with official slant & cuts)
+export function HikvisionLogo({ className = "h-6 sm:h-7 md:h-8 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 200 40" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       <g transform="skewX(-11)">
@@ -31,8 +31,8 @@ export function HikvisionLogo({ className = "h-5 sm:h-6 w-auto" }: { className?:
   );
 }
 
-// 2. Dahua Technology Official Logo (Red oval swirl mark + italic logotype + subtext)
-export function DahuaLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: string }) {
+// 2. Dahua Technology Official Vector Logo (Red oval swirl mark + italic logotype + subtext)
+export function DahuaLogo({ className = "h-6 sm:h-7 md:h-8 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 160 38" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Red Oval Swirl Icon */}
@@ -64,8 +64,8 @@ export function DahuaLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: str
   );
 }
 
-// 3. CP PLUS Official Logo (4-corner aperture mark + red cross + bold CP PLUS typography)
-export function CpPlusLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: string }) {
+// 3. CP PLUS Official Vector Logo (4-corner aperture mark + red cross + bold CP PLUS typography)
+export function CpPlusLogo({ className = "h-6 sm:h-7 md:h-8 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 160 34" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* 4 Corner Bracket Mark */}
@@ -96,8 +96,8 @@ export function CpPlusLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: st
   );
 }
 
-// 4. Honeywell Official Logo (Signature Red Italic Logotype)
-export function HoneywellLogo({ className = "h-4 sm:h-5 w-auto" }: { className?: string }) {
+// 4. Honeywell Official Vector Logo (Signature Red Italic Logotype)
+export function HoneywellLogo({ className = "h-5 sm:h-6 md:h-7 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 160 30" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       <g fill="#ED1C24" transform="skewX(-8) translate(5, 2)">
@@ -118,8 +118,8 @@ export function HoneywellLogo({ className = "h-4 sm:h-5 w-auto" }: { className?:
   );
 }
 
-// 5. V-Guard Official Logo (Signature Orange Sweeping Crest + Bold V-GUARD)
-export function VGuardLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: string }) {
+// 5. V-Guard Official Vector Logo (Signature Orange Sweeping Crest + Bold V-GUARD)
+export function VGuardLogo({ className = "h-6 sm:h-7 md:h-8 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 160 36" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Orange Wing/Shield Logomark */}
@@ -150,8 +150,8 @@ export function VGuardLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: st
   );
 }
 
-// 6. Sony Official Logo (Classic Bold Serif Logotype)
-export function SonyLogo({ className = "h-4 sm:h-5 w-auto" }: { className?: string }) {
+// 6. Sony Official Vector Logo (Classic Bold Serif Logotype)
+export function SonyLogo({ className = "h-5 sm:h-6 md:h-7 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 140 26" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       <g fill="#111111" transform="translate(6, 2)">
@@ -168,8 +168,8 @@ export function SonyLogo({ className = "h-4 sm:h-5 w-auto" }: { className?: stri
   );
 }
 
-// 7. Panasonic Official Logo (Official Panasonic Blue Solid Logotype)
-export function PanasonicLogo({ className = "h-4 sm:h-5 w-auto" }: { className?: string }) {
+// 7. Panasonic Official Vector Logo (Official Panasonic Blue Solid Logotype)
+export function PanasonicLogo({ className = "h-5 sm:h-6 md:h-7 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 160 26" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       <g fill="#005B9E" transform="translate(2, 3)">
@@ -196,8 +196,8 @@ export function PanasonicLogo({ className = "h-4 sm:h-5 w-auto" }: { className?:
   );
 }
 
-// 8. D-Link Official Logo (Signature Teal Logotype with distinctive serif & hyphen)
-export function DLinkLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: string }) {
+// 8. D-Link Official Vector Logo (Signature Teal Logotype with distinctive serif & hyphen)
+export function DLinkLogo({ className = "h-6 sm:h-7 md:h-8 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 150 30" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       <g fill="#007E9E" transform="translate(4, 2)">
@@ -218,8 +218,8 @@ export function DLinkLogo({ className = "h-5 sm:h-6 w-auto" }: { className?: str
   );
 }
 
-// 9. TP-Link Official Logo (Cyan Curved Mark + Dot + Modern tp-link logotype)
-export function TpLinkLogo({ className = "h-6 sm:h-7 w-auto" }: { className?: string }) {
+// 9. TP-Link Official Vector Logo (Cyan Curved Mark + Dot + Modern tp-link logotype)
+export function TpLinkLogo({ className = "h-7 sm:h-8 md:h-9 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 150 34" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Cyan Curved Icon */}
@@ -235,7 +235,7 @@ export function TpLinkLogo({ className = "h-6 sm:h-7 w-auto" }: { className?: st
         {/* t */}
         <path d="M 2 4 L 6 4 L 6 0 L 10 0 L 10 4 L 14 4 L 14 7.5 L 10 7.5 L 10 14 C 10 15.5 11 16 12.5 16 C 13.2 16 13.8 15.8 14 15.5 L 14 19 C 13.2 19.4 12 19.5 10.5 19.5 C 7.5 19.5 6 17.5 6 14.5 L 6 7.5 L 2 7.5 Z" />
         {/* p */}
-        <path d="M 16 4 L 20 4 L 20 6.5 C 21 5 23 4 25.5 4 C 29 4 31.5 6.5 31.5 11.5 C 31.5 16.5 29 19 25.5 19 C 23 19 21 18 20 16.5 L 20 24 L 16 24 Z M 20 11.5 C 20 14.5 21.5 16 23.5 16 C 25.5 16 27.5 14.5 27.5 11.5 C 27.5 8.5 25.5 7 23.5 7 C 21.5 7 20 8.5 20 11.5 Z" />
+        <path d="M 16 4 L 20 4 L 20 6.5 C 21 5 23 4 25.5 4 C 29 4 31.5 6.5 31.5 11.5 C 31.5 16.5 29 19 25.5 19 C 23 19 21 18 20 16.5 L 20 24 L 16 24 Z M 20 11.5 C 20 14.5 21.5 16 23.5 16 C 27.5 16 27.5 14.5 27.5 11.5 C 27.5 8.5 25.5 7 23.5 7 C 21.5 7 20 8.5 20 11.5 Z" />
         {/* Hyphen */}
         <path d="M 34 10 L 39 10 L 39 12.5 L 34 12.5 Z" />
         {/* l */}
@@ -251,8 +251,8 @@ export function TpLinkLogo({ className = "h-6 sm:h-7 w-auto" }: { className?: st
   );
 }
 
-// 10. Samsung Official Logo (Iconic Blue Logotype with custom 'A' without crossbar)
-export function SamsungLogo({ className = "h-4 sm:h-5 w-auto" }: { className?: string }) {
+// 10. Samsung Official Vector Logo (Iconic Blue Logotype with custom 'A' without crossbar)
+export function SamsungLogo({ className = "h-5 sm:h-6 md:h-7 w-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 160 26" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       <g fill="#0C4DA2" transform="translate(2, 3)">
@@ -308,7 +308,7 @@ export function PartnerBrands() {
             return (
               <MotionStaggerItem key={brand.name}>
                 <div
-                  className="bg-white rounded-2xl px-4 py-4 sm:px-5 sm:py-5 border border-neutral-200/80 shadow-sm hover:shadow-md hover:border-[#00C689]/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center min-h-[64px] sm:min-h-[72px]"
+                  className="bg-white rounded-2xl px-4 py-5 sm:px-5 sm:py-6 border border-neutral-200/80 shadow-sm hover:shadow-md hover:border-[#00C689]/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center min-h-[72px] sm:min-h-[80px]"
                 >
                   <LogoComponent />
                 </div>
@@ -320,4 +320,3 @@ export function PartnerBrands() {
     </section>
   );
 }
-

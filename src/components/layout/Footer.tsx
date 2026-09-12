@@ -18,7 +18,7 @@ export function Footer() {
               aria-label="Defense Security Systems Homepage"
             >
               <Image
-                src="/logo.png"
+                src="/newlogo.png"
                 alt="Defense Security & Surveillance"
                 width={170}
                 height={55}

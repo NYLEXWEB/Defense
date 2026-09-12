@@ -57,7 +57,7 @@ export function Navbar() {
               aria-label="Defense Security Systems Homepage"
             >
               <Image
-                src="/logo.png"
+                src="/newlogo.png"
                 alt="Defense Security & Surveillance"
                 width={160}
                 height={52}
@@ -146,7 +146,7 @@ export function Navbar() {
                 className="flex items-center"
               >
                 <Image
-                  src="/logo.png"
+                  src="/newlogo.png"
                   alt="Defense Security & Surveillance"
                   width={150}
                   height={48}
