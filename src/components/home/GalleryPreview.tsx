@@ -12,13 +12,19 @@ export function GalleryPreview() {
   const [activeImage, setActiveImage] = useState<GalleryItem | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Duplicate images to create a seamless 100% infinite loop ticker
-  const duplicatedImages = [...galleryImages, ...galleryImages];
+  // Row 1: Direct order duplicated
+  const row1Images = [...galleryImages, ...galleryImages];
+
+  // Row 2: Reversed order duplicated for opposite visual flow
+  const row2Images = [
+    ...[...galleryImages].reverse(),
+    ...[...galleryImages].reverse(),
+  ];
 
   return (
     <section className="py-16 md:py-24 bg-white border-t border-neutral-200/70 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-        {/* Section Header with "View Full Gallery" button */}
+        {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <MotionFadeIn delay={0.1}>
             <div className="inline-block bg-[#00C689] px-6 py-2.5 sm:px-7 sm:py-3 mb-4 shadow-sm">
@@ -44,54 +50,93 @@ export function GalleryPreview() {
         </div>
       </div>
 
-      {/* Infinite Auto-Scrolling Carousel Container */}
+      {/* 2-Row Dual Auto-Scrolling Carousel */}
       <div
-        className="relative w-full overflow-hidden py-4 cursor-grab active:cursor-grabbing"
+        className="relative w-full space-y-4 sm:space-y-6 py-2 cursor-grab active:cursor-grabbing"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={() => setIsPaused(true)}
         onTouchEnd={() => setIsPaused(false)}
       >
-        {/* Soft edge fade overlays */}
-        <div className="absolute top-0 left-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 right-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        {/* White fade overlay ONLY on desktop/laptop (hidden on mobile as requested) */}
+        <div className="hidden md:block absolute top-0 left-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="hidden md:block absolute top-0 right-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-        <motion.div
-          className="flex gap-6 w-max"
-          animate={{ x: isPaused ? undefined : ["0%", "-50%"] }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 35,
-              ease: "linear",
-            },
-          }}
-        >
-          {duplicatedImages.map((img, index) => (
-            <div
-              key={`${img.id}-${index}`}
-              onClick={() => setActiveImage(img)}
-              className="group relative w-72 sm:w-80 md:w-96 h-52 sm:h-60 md:h-64 rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-300 shrink-0 cursor-pointer"
-            >
-              <Image
-                src={img.src}
-                alt={`Gallery photo ${index + 1}`}
-                fill
-                sizes="(max-width: 768px) 300px, 400px"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-
-              {/* Hover Zoom Icon */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-12 h-12 rounded-full bg-[#00C689] text-[#06221a] flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
-                  <ZoomIn className="w-6 h-6" />
+        {/* Row 1: Leftward Auto-Scroll */}
+        <div className="relative w-full overflow-hidden">
+          <motion.div
+            className="flex gap-4 sm:gap-6 w-max"
+            animate={{ x: isPaused ? undefined : ["0%", "-50%"] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 35,
+                ease: "linear",
+              },
+            }}
+          >
+            {row1Images.map((img, index) => (
+              <div
+                key={`r1-${img.id}-${index}`}
+                onClick={() => setActiveImage(img)}
+                className="group relative w-60 sm:w-80 md:w-96 h-44 sm:h-56 md:h-64 rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-300 shrink-0 cursor-pointer"
+              >
+                <Image
+                  src={img.src}
+                  alt={`Gallery photo R1-${index + 1}`}
+                  fill
+                  sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, 400px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/15 group-hover:bg-black/40 transition-colors duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#00C689] text-[#06221a] flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+                    <ZoomIn className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Row 2: Rightward Auto-Scroll */}
+        <div className="relative w-full overflow-hidden">
+          <motion.div
+            className="flex gap-4 sm:gap-6 w-max"
+            animate={{ x: isPaused ? undefined : ["-50%", "0%"] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 35,
+                ease: "linear",
+              },
+            }}
+          >
+            {row2Images.map((img, index) => (
+              <div
+                key={`r2-${img.id}-${index}`}
+                onClick={() => setActiveImage(img)}
+                className="group relative w-60 sm:w-80 md:w-96 h-44 sm:h-56 md:h-64 rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-300 shrink-0 cursor-pointer"
+              >
+                <Image
+                  src={img.src}
+                  alt={`Gallery photo R2-${index + 1}`}
+                  fill
+                  sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, 400px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/15 group-hover:bg-black/40 transition-colors duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#00C689] text-[#06221a] flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+                    <ZoomIn className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
 
       {/* Pure Image Lightbox Modal */}

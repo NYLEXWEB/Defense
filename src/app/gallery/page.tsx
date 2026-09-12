@@ -23,12 +23,12 @@ export default function GalleryPage() {
 
       {/* Pure Image Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
           {galleryImages.map((img, index) => (
             <div
               key={img.id}
               onClick={() => setActiveImage(img)}
-              className="group relative h-64 sm:h-72 rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-400 cursor-pointer"
+              className="group relative h-48 sm:h-64 md:h-72 rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-200/90 shadow-sm hover:shadow-xl transition-all duration-400 cursor-pointer"
             >
               <Image
                 src={img.src}
