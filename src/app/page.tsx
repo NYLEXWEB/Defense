@@ -7,7 +7,7 @@ import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { PartnerBrands } from "@/components/home/PartnerBrands";
 import { ExpertiseSection } from "@/components/home/ExpertiseSection";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
-import { ReviewsPreview } from "@/components/home/ReviewsPreview";
+import { SocialMediaSection } from "@/components/home/SocialMediaSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
 export default function HomePage() {
@@ -22,7 +22,7 @@ export default function HomePage() {
       <PartnerBrands />
       <ExpertiseSection />
       <GalleryPreview />
-      <ReviewsPreview />
+      <SocialMediaSection />
       <FinalCTA />
     </div>
   );
