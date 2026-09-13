@@ -1,15 +1,45 @@
 export const siteConfig = {
   name: "Defense Security Systems",
+  legalName: "Defense Security Systems Kollam",
   shortName: "Defense",
+  siteUrl: "https://defensesecurity.in",
   tagline: "Protecting What Matters Most.",
   description:
-    "Defense Security Systems is a leading provider of CCTV solutions, dedicated to delivering top-quality security cameras, surveillance systems, and exceptional customer service.",
+    "Defense Security Systems is a leading provider of CCTV camera installation, smart surveillance, video door phones, and electronic security solutions in Thevally, Kollam, Kerala since 2016.",
   story:
-    "Established in 2016, our company has grown to become a trusted name in the security industry, serving homes, businesses, and institutions.",
+    "Established in 2016, Defense Security Systems has grown to become Kollam's most trusted name in electronic surveillance and smart security, serving hundreds of homes, businesses, schools, and institutions across Kerala.",
   mission:
-    "To provide innovative CCTV solutions that meet the evolving security needs of our clients, ensuring their safety, security, and peace of mind.",
+    "To deliver innovative, reliable, and high-performance CCTV surveillance solutions tailored to each client's unique security needs, ensuring absolute peace of mind 24/7.",
   establishedYear: 2016,
-  location: "Thevally, Kollam, Kerala, India",
+  location: "Thevally, Kollam, Kerala 691009, India",
+  address: {
+    streetAddress: "Near Thevally Bridge, Thevally",
+    addressLocality: "Kollam",
+    addressRegion: "Kerala",
+    postalCode: "691009",
+    addressCountry: "IN",
+  },
+  geo: {
+    latitude: 8.8932,
+    longitude: 76.5841,
+  },
+  openingHours: "Mo-Sa 09:00-19:30",
+  openingHoursSpecification: [
+    {
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:00",
+      closes: "19:30",
+    },
+  ],
+  priceRange: "₹₹",
+  email: "defensesecuritykollam@gmail.com",
   phones: [
     { display: "+91 7025 552 265", raw: "+917025552265" },
   ],
@@ -18,6 +48,86 @@ export const siteConfig = {
     facebook: "https://facebook.com/defense_security_kollam",
     handle: "defense_security_kollam",
   },
+  areasServed: [
+    "Kollam",
+    "Thevally",
+    "Karunagappally",
+    "Kottarakkara",
+    "Paravur",
+    "Kundara",
+    "Chathannoor",
+    "Punalur",
+    "Anchal",
+    "Pathanapuram",
+    "Kerala",
+  ],
+  keywords: [
+    // Top Local Kollam & Kerala High-Volume Searches
+    "CCTV camera installation Kollam",
+    "Best CCTV installation company in Kollam",
+    "CCTV camera dealers in Kollam",
+    "CCTV camera shop near me Kollam",
+    "CCTV camera price in Kerala",
+    "CCTV camera installation cost in Kollam",
+    "Security camera installation services Kerala",
+    "CCTV camera technician in Kollam",
+    "CCTV camera sales and service Kollam",
+    "Low cost CCTV camera installation Kerala",
+    "House security camera installation Kollam",
+    "Shop surveillance camera setup Kollam",
+    "Office CCTV networking and WiFi solutions Kerala",
+    "Thevally CCTV camera shop Kollam",
+    "Defense Security Systems Thevally Kollam",
+
+    // Top Brand Specific Keywords (High Search Demand)
+    "Hikvision CCTV camera installation Kollam",
+    "Hikvision dealer near me Kollam Kerala",
+    "Dahua IP camera installation Kollam",
+    "Dahua Technology security camera dealers Kerala",
+    "CP PLUS CCTV camera installation price Kerala",
+    "CP PLUS security camera dealer Kollam",
+    "Ezviz WiFi wireless camera Kollam",
+    "Imou 360 degree security camera Kerala",
+    "UNV Uniview IP camera installation Kerala",
+    "Honeywell security surveillance systems Kollam",
+    "TP-Link Tapo smart WiFi camera installation",
+
+    // Trending Smart Technology & Modern Surveillance
+    "AI motion detection CCTV cameras Kollam",
+    "Color night vision security camera installation Kerala",
+    "WiFi smart CCTV camera for home with two-way audio",
+    "4K 8MP Ultra HD IP surveillance camera system Kollam",
+    "Solar powered CCTV camera installation Kerala",
+    "Wireless outdoor CCTV security camera Kerala",
+    "Mobile app live viewing CCTV setup Android iPhone",
+    "DVR NVR hard disk storage setup Kollam",
+    "PoE IP camera network cabling Kollam",
+
+    // Smart Automation, Gates & Access Control
+    "Automatic sliding remote gate installation Kollam",
+    "Motorized gate opener dealers Kerala",
+    "Automatic swing gate motors Kollam",
+    "Video door phone intercom installation Kollam",
+    "Smart video doorbell with camera and mobile notification",
+    "Smart home automation solutions Kollam Kerala",
+    "Biometric attendance system and access control Kollam",
+    "Inverter UPS power backup for CCTV systems Kerala",
+    "Structured network server rack cabling Kollam",
+
+    // AMC, Maintenance & CCTV Repair
+    "CCTV repair service near me Kollam",
+    "CCTV AMC annual maintenance contract Kollam Kerala",
+    "CCTV camera cable repair and troubleshooting Kerala",
+    "CCTV hard drive DVR repair Kollam",
+    "24/7 CCTV monitoring services Kerala",
+
+    // Sector Specific Coverage
+    "Residential home security camera installation Kollam",
+    "Commercial office CCTV surveillance Kerala",
+    "School and college campus CCTV security network Kollam",
+    "School bus GPS and CCTV tracking system Kerala",
+    "Hospital and clinic security surveillance systems Kerala",
+  ],
   overviewItems: [
     "CCTV IP & HD",
     "Networking & Wifi",
@@ -43,50 +153,46 @@ export const siteConfig = {
       id: "home",
       title: "Home",
       tagline: "Residential Peace of Mind",
-      image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/sectors/home.jpg",
     },
     {
       id: "office",
       title: "Office",
       tagline: "Corporate & Commercial Security",
-      image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/sectors/office.jpg",
     },
     {
       id: "school",
       title: "School",
       tagline: "Educational Campus Protection",
-      image:
-        "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/sectors/school.jpg",
     },
     {
       id: "bus",
       title: "Bus",
       tagline: "Transit & Fleet Surveillance",
-      image:
-        "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/sectors/bus.jpg",
     },
   ],
   whyChooseUs: [
     {
       title: "Quality Products",
-      description: "We offer high-quality CCTV products from reputable brands.",
+      description: "We provide high-definition, genuine security equipment from world-leading brands including Hikvision, Dahua, and CP PLUS.",
       icon: "ShieldCheck",
     },
     {
       title: "Competitive Prices",
-      description: "We offer competitive pricing without compromising on quality.",
+      description: "Transparent, honest pricing packages for homes, retail shops, and commercial enterprises without compromising durability.",
       icon: "BadgePercent",
     },
     {
       title: "Expert Installation",
-      description: "Our team of experts will install and set up your CCTV system.",
+      description: "Our certified technicians ensure clean conduit cabling, optimal camera angles, and seamless smartphone remote viewing setup.",
       icon: "Wrench",
     },
     {
       title: "Exceptional Customer Service",
-      description: "We provide dedicated customer support and service.",
+      description: "Dedicated after-sales support, periodic maintenance, and rapid 24/7 technical assistance across Kollam and Kerala.",
       icon: "Headphones",
     },
   ],

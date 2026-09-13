@@ -28,7 +28,7 @@ export function GalleryPreview() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <MotionFadeIn delay={0.1}>
             <div className="inline-block bg-[#00C689] px-6 py-2.5 sm:px-7 sm:py-3 mb-4 shadow-sm">
-              <span className="text-white font-extrabold uppercase tracking-wider text-base sm:text-lg block font-heading">
+              <span className="text-white font-extrabold uppercase tracking-wider text-base sm:text-lg md:text-xl block font-sans">
                 PROJECT GALLERY
               </span>
             </div>
@@ -84,7 +84,7 @@ export function GalleryPreview() {
               >
                 <Image
                   src={img.src}
-                  alt={`Gallery photo R1-${index + 1}`}
+                  alt={img.alt || img.title}
                   fill
                   sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, 400px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -122,7 +122,7 @@ export function GalleryPreview() {
               >
                 <Image
                   src={img.src}
-                  alt={`Gallery photo R2-${index + 1}`}
+                  alt={img.alt || img.title}
                   fill
                   sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, 400px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -165,7 +165,7 @@ export function GalleryPreview() {
               <div className="relative w-full h-full max-h-[85vh] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src={activeImage.src}
-                  alt="Gallery full view"
+                  alt={activeImage.alt || activeImage.title}
                   fill
                   className="object-contain"
                   priority

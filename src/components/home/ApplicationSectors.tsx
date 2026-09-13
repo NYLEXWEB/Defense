@@ -20,7 +20,7 @@ export function ApplicationSectors() {
         {/* Header Block */}
         <MotionFadeIn className="text-center max-w-3xl mx-auto mb-14" delay={0.1}>
           <div className="inline-block bg-[#00C689] px-6 py-2.5 sm:px-7 sm:py-3 mb-4 shadow-sm">
-            <span className="text-white font-extrabold uppercase tracking-wider text-base sm:text-lg block font-heading">
+            <span className="text-white font-extrabold uppercase tracking-wider text-base sm:text-lg md:text-xl block font-sans">
               APPLICATION COVERAGE
             </span>
           </div>
@@ -44,7 +44,7 @@ export function ApplicationSectors() {
                   <div className="relative h-52 w-full overflow-hidden">
                     <Image
                       src={sector.image}
-                      alt={`${sector.title} Security Solutions`}
+                      alt={`${sector.title} CCTV camera surveillance and security installation in Kollam, Kerala`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -57,7 +57,7 @@ export function ServicesPreview() {
                           <div className="relative h-56 sm:h-64 w-full rounded-[22px] overflow-hidden">
                             <Image
                               src={service.image}
-                              alt={service.title}
+                              alt={`${service.title} - Defense Security Systems Kollam Kerala`}
                               fill
                               sizes="(max-width: 768px) 100vw, 40vw"
                               className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -125,7 +125,7 @@ export function ServicesPreview() {
                           <div className="relative h-56 sm:h-64 w-full rounded-[22px] overflow-hidden">
                             <Image
                               src={service.image}
-                              alt={service.title}
+                              alt={`${service.title} - Defense Security Systems Kollam Kerala`}
                               fill
                               sizes="(max-width: 768px) 100vw, 40vw"
                               className="object-cover group-hover:scale-105 transition-transform duration-500"

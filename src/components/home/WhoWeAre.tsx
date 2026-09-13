@@ -26,8 +26,8 @@ export function WhoWeAre() {
                 className="relative rounded-3xl overflow-hidden bg-[#06221a] border border-[#00C689]/30 shadow-2xl cursor-pointer aspect-square w-full transition-transform duration-500 group-hover:-translate-y-1"
               >
                 <Image
-                  src="/About/IMG-20250103-WA0105.jpg"
-                  alt="Defense Security & Surveillance Services Kollam"
+                  src="/images/about/defense-security-systems-thevally-kollam-cctv-flyer.jpg"
+                  alt="Defense Security Systems - Premier CCTV surveillance and electronic security solutions in Thevally Kollam Kerala"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -42,8 +42,8 @@ export function WhoWeAre() {
           {/* Right Column: Content */}
           <MotionFadeIn className="lg:col-span-7 space-y-6" delay={0.2}>
             {/* Rectangular Emerald Badge */}
-            <div className="inline-block bg-[#00C689] px-6 py-2.5 shadow-sm">
-              <span className="text-white font-extrabold uppercase tracking-wider text-sm sm:text-base block font-heading">
+            <div className="inline-block bg-[#00C689] px-6 py-2.5 sm:px-7 sm:py-3 shadow-sm">
+              <span className="text-white font-extrabold uppercase tracking-wider text-sm sm:text-base md:text-lg block font-sans">
                 ABOUT DEFENSE SECURITY
               </span>
             </div>

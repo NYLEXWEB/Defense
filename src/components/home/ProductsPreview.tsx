@@ -39,7 +39,7 @@ export function ProductsPreview() {
                 <div className="relative w-40 h-40 sm:w-44 sm:h-44 shrink-0 rounded-2xl bg-[#FAFAFA] border border-neutral-100 p-2 flex items-center justify-center overflow-hidden shadow-inner group-hover:scale-105 transition-transform duration-400 corner-frame-box">
                   <Image
                     src={product.image}
-                    alt={product.name}
+                    alt={`${product.name} - Defense Security Systems Kollam Kerala`}
                     fill
                     sizes="(max-width: 640px) 160px, 180px"
                     className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"

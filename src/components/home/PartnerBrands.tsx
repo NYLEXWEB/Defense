@@ -6,16 +6,16 @@ import { MotionFadeIn, MotionStaggerContainer, MotionStaggerItem } from "@/compo
 
 // 10 Brand Images from public/brand/ directory in numerical order 1 to 10
 const brandList = [
-  { id: 1, src: "/brand/1.png", name: "Hikvision" },
-  { id: 2, src: "/brand/2.png", name: "Dahua" },
-  { id: 3, src: "/brand/3.png", name: "CP PLUS" },
-  { id: 4, src: "/brand/4.png", name: "Honeywell" },
-  { id: 5, src: "/brand/5.png", name: "V-Guard" },
-  { id: 6, src: "/brand/6.png", name: "Sony" },
-  { id: 7, src: "/brand/7.png", name: "Panasonic" },
-  { id: 8, src: "/brand/8.png", name: "D-Link" },
-  { id: 9, src: "/brand/9.png", name: "TP-Link" },
-  { id: 10, src: "/brand/10.png", name: "Samsung" },
+  { id: 1, src: "/brand/1.png", name: "Hikvision", alt: "Hikvision CCTV Security Cameras and DVR Systems Dealer Kollam Kerala" },
+  { id: 2, src: "/brand/2.png", name: "Dahua", alt: "Dahua Technology HD IP Cameras and NVR Surveillance Kollam Kerala" },
+  { id: 3, src: "/brand/3.png", name: "CP PLUS", alt: "CP PLUS Security Cameras and Smart Surveillance Solutions Kerala" },
+  { id: 4, src: "/brand/4.png", name: "Honeywell", alt: "Honeywell Commercial Security and Access Control Systems Kerala" },
+  { id: 5, src: "/brand/5.png", name: "V-Guard", alt: "V-Guard Power Inverters and Surge Protectors for CCTV Systems" },
+  { id: 6, src: "/brand/6.png", name: "Sony", alt: "Sony High-Resolution Image Sensor CCTV Security Cameras" },
+  { id: 7, src: "/brand/7.png", name: "Panasonic", alt: "Panasonic Smart Surveillance and Video Intercom Systems Kollam" },
+  { id: 8, src: "/brand/8.png", name: "D-Link", alt: "D-Link PoE Network Switches and Wireless WiFi Routers Kollam" },
+  { id: 9, src: "/brand/9.png", name: "TP-Link", alt: "TP-Link Tapo Smart WiFi Cameras and Gigabit Network Setup Kerala" },
+  { id: 10, src: "/brand/10.png", name: "Samsung", alt: "Samsung Security and Video Surveillance Technologies Kerala" },
 ];
 
 export function PartnerBrands() {
@@ -42,7 +42,7 @@ export function PartnerBrands() {
                   <div className="relative w-full h-12 sm:h-14 flex items-center justify-center">
                     <Image
                       src={brand.src}
-                      alt={brand.name}
+                      alt={brand.alt}
                       fill
                       sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 200px"
                       className="object-contain group-hover:scale-105 transition-transform duration-300 p-1"
