@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Target, Compass, ArrowRight, Home, Building, GraduationCap, Bus, CheckCircle2 } from "lucide-react";
-import { SectionBadge } from "@/components/ui/SectionBadge";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/data/site";
 import { constructMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
@@ -47,7 +45,12 @@ export default function AboutPage() {
         {/* Header Banner */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 md:mb-24">
           <div className="max-w-3xl">
-            <SectionBadge className="mb-4">About Defense Security</SectionBadge>
+            {/* Solid Green Rectangular Banner */}
+            <div className="inline-block bg-[#00C689] px-6 py-2.5 sm:px-8 sm:py-3 mb-6 shadow-sm">
+              <span className="text-white font-extrabold uppercase tracking-wider text-base sm:text-lg md:text-xl block">
+                ABOUT DEFENSE SECURITY
+              </span>
+            </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#222524] leading-[1.1]">
               Committed to safeguarding spaces since{" "}
               <span className="text-[#008D62]">2016.</span>
@@ -125,12 +128,20 @@ export default function AboutPage() {
 
         {/* Application Sectors Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 md:mb-28">
-          <SectionHeading
-            badge="Application Coverage"
-            title="Engineered for every environment."
-            subtitle="Specialized systems configured for maximum reliability across homes, offices, schools, and vehicle fleets."
-            className="mb-14"
-          />
+          <div className="mb-14">
+            {/* Solid Green Rectangular Banner */}
+            <div className="inline-block bg-[#00C689] px-6 py-2.5 sm:px-8 sm:py-3 mb-4 shadow-sm">
+              <span className="text-white font-extrabold uppercase tracking-wider text-base sm:text-lg md:text-xl block">
+                APPLICATION COVERAGE
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#222524] tracking-tight">
+              Engineered for every environment.
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-[#555c59] max-w-2xl leading-relaxed">
+              Specialized systems configured for maximum reliability across homes, offices, schools, and vehicle fleets.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {siteConfig.sectors.map((sector) => {
