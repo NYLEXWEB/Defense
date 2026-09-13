@@ -31,9 +31,32 @@
 }
 
 html {
-  scroll-behavior: smooth;
   color-scheme: light;
   font-family: var(--font-poppins), Poppins, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Lenis Smooth Inertia Scrolling */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent],
+.lenis [data-lenis-prevent-wheel],
+.lenis [data-lenis-prevent-touch] {
+  overscroll-behavior: contain;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
 
 body {

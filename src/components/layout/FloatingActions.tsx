@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronUp, Headset, X } from "lucide-react";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLenis } from "lenis/react";
 import { siteConfig } from "@/data/site";
 
 // Official Google "G" Icon
@@ -36,6 +37,7 @@ const GOOGLE_REVIEWS_URL =
 export function FloatingActions() {
   const [isOpen, setIsOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const lenis = useLenis();
 
   // Monitor scroll position to reveal Scroll-To-Top button when user reaches half page
   useEffect(() => {
@@ -52,10 +54,17 @@ export function FloatingActions() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (lenis) {
+      lenis.scrollTo(0, {
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   const whatsappUrl = `https://wa.me/${siteConfig.phones[0].raw.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
