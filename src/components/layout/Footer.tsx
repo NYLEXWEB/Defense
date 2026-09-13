@@ -20,9 +20,9 @@ export function Footer() {
               <Image
                 src="/newlogo.png"
                 alt="Defense Security & Surveillance"
-                width={170}
-                height={55}
-                className="h-10 sm:h-12 w-auto object-contain"
+                width={240}
+                height={78}
+                className="h-13 sm:h-16 md:h-18 w-auto object-contain scale-110 origin-left"
               />
             </Link>
 

@@ -53,16 +53,16 @@ export function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#00C689] rounded-lg transition-transform duration-300 hover:scale-[1.02]"
+              className="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#00C689] rounded-lg transition-transform duration-300 hover:scale-[1.02] py-1"
               aria-label="Defense Security Systems Homepage"
             >
               <Image
                 src="/newlogo.png"
                 alt="Defense Security & Surveillance"
-                width={160}
-                height={52}
+                width={220}
+                height={70}
                 priority
-                className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:opacity-95"
+                className="h-11 sm:h-[3.25rem] md:h-14 w-auto object-contain scale-110 sm:scale-125 origin-left transition-transform duration-300 group-hover:scale-130 drop-shadow-xs"
               />
             </Link>
 
@@ -148,10 +148,10 @@ export function Navbar() {
                 <Image
                   src="/newlogo.png"
                   alt="Defense Security & Surveillance"
-                  width={150}
-                  height={48}
+                  width={200}
+                  height={64}
                   priority
-                  className="h-9 w-auto object-contain"
+                  className="h-12 sm:h-14 w-auto object-contain scale-110 origin-left"
                 />
               </Link>
               <button

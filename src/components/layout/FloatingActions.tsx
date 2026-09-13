@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ChevronUp, Headset, X } from "lucide-react";
+import { ChevronUp } from "lucide-react";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLenis } from "lenis/react";
 import { siteConfig } from "@/data/site";
 
 // Official Google "G" Icon
-function GoogleGIcon({ className = "w-5 h-5 shrink-0" }: { className?: string }) {
+function GoogleGIcon({ className = "w-6 h-6 sm:w-7 sm:h-7 shrink-0" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} xmlns="http://www.w3.org/2000/svg">
       <path
@@ -35,11 +35,10 @@ const GOOGLE_REVIEWS_URL =
   "https://www.google.com/search?q=Defense+Security+Systems+Kollam+Reviews";
 
 export function FloatingActions() {
-  const [isOpen, setIsOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const lenis = useLenis();
 
-  // Monitor scroll position to reveal Scroll-To-Top button when user reaches half page
+  // Monitor scroll position to reveal Scroll-To-Top button when user scrolls down
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 380) {
@@ -73,7 +72,7 @@ export function FloatingActions() {
 
   return (
     <div className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-[99] flex flex-col items-center gap-3.5 pointer-events-auto select-none">
-      {/* 1. Scroll-To-Top Button (Perfectly centered directly above floating menu) */}
+      {/* 1. Scroll-To-Top Button (Appears above the 3 social buttons on scroll) */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
@@ -82,7 +81,7 @@ export function FloatingActions() {
             exit={{ opacity: 0, scale: 0.7, y: 15 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             onClick={scrollToTop}
-            className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#06221a]/95 hover:bg-[#008D62] text-white border-2 border-[#00C689]/40 backdrop-blur-md shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer group"
+            className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#06221a]/95 hover:bg-[#008D62] text-white border-2 border-[#00C689]/40 backdrop-blur-md shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer group mb-1"
             aria-label="Scroll back to top"
             title="Scroll to Top"
           >
@@ -91,90 +90,64 @@ export function FloatingActions() {
         )}
       </AnimatePresence>
 
-      {/* 2. Pop-up Action Speed Dial Container */}
-      <div className="relative flex flex-col items-center">
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 10, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.9 }}
-              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center gap-3 mb-3.5"
-            >
-              {/* Action 1: WhatsApp */}
-              <motion.a
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.05 }}
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative flex items-center justify-center group"
-              >
-                <span className="absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-white text-[#222524] text-xs font-bold shadow-md border border-neutral-200/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-                  WhatsApp Support
-                </span>
-                <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#25D366] text-white shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300 border-2 border-white/30">
-                  <FaWhatsapp className="w-6 h-6 sm:w-7 sm:h-7" />
-                </div>
-              </motion.a>
-
-              {/* Action 2: Instagram */}
-              <motion.a
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                href={siteConfig.socials.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative flex items-center justify-center group"
-              >
-                <span className="absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-white text-[#222524] text-xs font-bold shadow-md border border-neutral-200/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-                  Follow on Instagram
-                </span>
-                <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300 border-2 border-white/30">
-                  <FaInstagram className="w-6 h-6 sm:w-7 sm:h-7" />
-                </div>
-              </motion.a>
-
-              {/* Action 3: Google Reviews */}
-              <motion.a
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.15 }}
-                href={GOOGLE_REVIEWS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative flex items-center justify-center group"
-              >
-                <span className="absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-white text-[#222524] text-xs font-bold shadow-md border border-neutral-200/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-                  Google 5-Star Reviews
-                </span>
-                <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-white text-[#222524] shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300 border-2 border-neutral-200">
-                  <GoogleGIcon className="w-6 h-6 sm:w-7 sm:h-7" />
-                </div>
-              </motion.a>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Main Floating Trigger Button */}
-        <button
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="relative w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#00C689] hover:bg-[#008D62] text-[#06221a] hover:text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer border-2 border-white/40 group shine-btn"
-          aria-label="Toggle contact menu"
-          title="Quick Contact & Support"
+      {/* 2. Direct Always-Open Floating Social Buttons Container */}
+      <div className="flex flex-col items-center gap-3">
+        {/* Button 1: WhatsApp */}
+        <motion.a
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative flex items-center justify-center group"
+          aria-label="WhatsApp Support"
         >
-          {/* Ambient Glow */}
-          <span className="absolute -inset-1 rounded-full bg-[#00C689]/50 blur-md animate-pulse pointer-events-none -z-10" />
+          <span className="absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-white text-[#222524] text-xs font-bold shadow-md border border-neutral-200/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+            WhatsApp Support
+          </span>
+          <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300 border-2 border-white/40">
+            <FaWhatsapp className="w-7 h-7 sm:w-8 sm:h-8" />
+          </div>
+        </motion.a>
 
-          {isOpen ? (
-            <X className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-300 rotate-90" />
-          ) : (
-            <Headset className="w-6 h-6 sm:w-7 sm:h-7 transition-transform duration-300 group-hover:scale-110" />
-          )}
-        </button>
+        {/* Button 2: Instagram */}
+        <motion.a
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.18, duration: 0.3 }}
+          href={siteConfig.socials.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative flex items-center justify-center group"
+          aria-label="Follow on Instagram"
+        >
+          <span className="absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-white text-[#222524] text-xs font-bold shadow-md border border-neutral-200/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+            Follow on Instagram
+          </span>
+          <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300 border-2 border-white/40">
+            <FaInstagram className="w-7 h-7 sm:w-8 sm:h-8" />
+          </div>
+        </motion.a>
+
+        {/* Button 3: Google Business & Reviews */}
+        <motion.a
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.25, duration: 0.3 }}
+          href={GOOGLE_REVIEWS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative flex items-center justify-center group"
+          aria-label="Google Profile & Reviews"
+        >
+          <span className="absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-white text-[#222524] text-xs font-bold shadow-md border border-neutral-200/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+            Google Profile &amp; Reviews
+          </span>
+          <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-white text-[#222524] shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300 border-2 border-neutral-200/90">
+            <GoogleGIcon className="w-7 h-7 sm:w-8 sm:h-8" />
+          </div>
+        </motion.a>
       </div>
     </div>
   );
