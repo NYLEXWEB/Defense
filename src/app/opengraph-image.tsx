@@ -138,7 +138,7 @@ export default async function Image() {
               fontWeight: 600,
             }}
           >
-            defensesecurity.in
+            defensesecurityit.in
           </div>
         </div>
       </div>

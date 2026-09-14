@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Defense Security Systems",
   legalName: "Defense Security Systems Kollam",
   shortName: "Defense",
-  siteUrl: "https://defensesecurity.in",
+  siteUrl: "https://defensesecurityit.in",
   tagline: "Protecting What Matters Most.",
   description:
     "Defense Security Systems is a leading provider of CCTV camera installation, smart surveillance, video door phones, and electronic security solutions in Thevally, Kollam, Kerala since 2016.",
@@ -39,7 +39,7 @@ export const siteConfig = {
     },
   ],
   priceRange: "₹₹",
-  email: "defensesecuritykollam@gmail.com",
+  email: "defensekollam@gmail.com",
   phones: [
     { display: "+91 7025 552 265", raw: "+917025552265" },
   ],

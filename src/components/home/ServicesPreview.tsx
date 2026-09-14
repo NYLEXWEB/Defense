@@ -2,13 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import { Camera, Settings, Wrench, Tv } from "lucide-react";
+import { Camera, Settings, Wrench, Tv, Sun } from "lucide-react";
 import { servicesData } from "@/data/services";
 import { MotionFadeIn } from "@/components/ui/MotionWrapper";
 
 const serviceIcons = {
   "cctv-installation": Camera,
   "system-design-and-integration": Settings,
+  "solar-system-installation": Sun,
   "maintenance-and-repair": Wrench,
   "monitoring-and-response": Tv,
 };
