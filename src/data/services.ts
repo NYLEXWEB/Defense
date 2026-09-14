@@ -29,7 +29,7 @@ export const servicesData: ServiceItem[] = [
     number: "03",
     title: "Solar System Installation",
     description: "Complete solar panel fitting, grid connections, and solar energy system maintenance for homes and commercial facilities.",
-    image: "/images/sectors/solar.jpg",
+    image: "/images/sectors/solar-panel.jpg",
     iconName: "Sun",
   },
   {
