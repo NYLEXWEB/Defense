@@ -33,7 +33,13 @@ export function constructMetadata({
     authors: [{ name: siteConfig.name, url: siteConfig.siteUrl }],
     creator: siteConfig.name,
     publisher: siteConfig.name,
-    metadataBase: new URL(siteConfig.siteUrl),
+    icons: {
+      icon: [
+        { url: "/icon.png", type: "image/png" },
+        { url: "/favicon.ico", sizes: "any" },
+      ],
+      apple: [{ url: "/apple-icon.png", type: "image/png" }],
+    },
     alternates: {
       canonical: url,
     },
