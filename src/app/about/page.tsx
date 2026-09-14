@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Target, Compass, ArrowRight, Home, Building, GraduationCap, Gem, CheckCircle2 } from "lucide-react";
+import { Target, Compass, ArrowRight, Home, Building, GraduationCap, Gem, Sun, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { constructMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
@@ -138,11 +138,11 @@ export default function AboutPage() {
               Engineered for every environment.
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[#555c59] max-w-2xl leading-relaxed">
-              Specialized systems configured for maximum reliability across homes, offices, schools, and jewelry showrooms.
+              Specialized systems configured for maximum reliability across homes, offices, schools, jewelry showrooms, and solar installations.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {siteConfig.sectors.map((sector) => {
               const Icon = sectorIcons[sector.id as keyof typeof sectorIcons] || Home;
               return (

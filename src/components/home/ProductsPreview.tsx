@@ -42,7 +42,9 @@ export function ProductsPreview() {
                     alt={`${product.name} - Defense Security Systems Kollam Kerala`}
                     fill
                     sizes="(max-width: 640px) 160px, 180px"
-                    className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                    className={`transition-transform duration-500 group-hover:scale-105 ${
+                      product.image.endsWith(".png") ? "object-contain p-2" : "object-cover rounded-xl"
+                    }`}
                   />
                 </div>
 

@@ -131,10 +131,10 @@ export const siteConfig = {
   overviewItems: [
     "CCTV IP & HD",
     "Networking & Wifi",
-    "Computer & Laptop",
+    "Solar Systems",
     "Remote Gate",
     "Inverter",
-    "Printers & Scanners",
+    "Computer & Laptop",
     "EPBX",
     "Video Door Phones",
   ],
@@ -172,6 +172,12 @@ export const siteConfig = {
       title: "Jewelry",
       tagline: "Jewellery Store & Showroom Protection",
       image: "/images/sectors/jewelry.jpg",
+    },
+    {
+      id: "solar",
+      title: "Solar System",
+      tagline: "Solar Panel Installation & Energy Solutions",
+      image: "/images/sectors/solar.jpg",
     },
   ],
   whyChooseUs: [

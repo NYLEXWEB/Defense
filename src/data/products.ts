@@ -15,6 +15,13 @@ export const productsData: ProductItem[] = [
     whatsappMessage: "Hi Defense Security, I am interested in CCTV Cameras, WiFi Cameras, and DVR/NVR Surveillance Systems. Please share pricing and details.",
   },
   {
+    id: "solar-systems",
+    name: "Solar Systems & Solar Panel Installation",
+    description: "On-grid & off-grid solar panel installations, solar power connections, and energy maintenance services for residential & commercial properties.",
+    image: "/images/sectors/solar.jpg",
+    whatsappMessage: "Hi Defense Security, I am interested in Solar Systems & Solar Panel Installation services. Please share pricing and details.",
+  },
+  {
     id: "video-door-phones",
     name: "Video Door Phones",
     description: "Video door phones enhance security with video, voice and audio communication",
