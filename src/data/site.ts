@@ -168,10 +168,10 @@ export const siteConfig = {
       image: "/images/sectors/school.jpg",
     },
     {
-      id: "bus",
-      title: "Bus",
-      tagline: "Transit & Fleet Surveillance",
-      image: "/images/sectors/bus.jpg",
+      id: "jewelry",
+      title: "Jewelry",
+      tagline: "Jewellery Store & Showroom Protection",
+      image: "/images/sectors/jewelry.jpg",
     },
   ],
   whyChooseUs: [

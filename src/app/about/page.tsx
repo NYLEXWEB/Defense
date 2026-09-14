@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Target, Compass, ArrowRight, Home, Building, GraduationCap, Bus, CheckCircle2 } from "lucide-react";
+import { Target, Compass, ArrowRight, Home, Building, GraduationCap, Gem, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { constructMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
@@ -27,7 +27,6 @@ const sectorIcons = {
   home: Home,
   office: Building,
   school: GraduationCap,
-  bus: Bus,
 };
 
 export default function AboutPage() {
@@ -139,7 +138,7 @@ export default function AboutPage() {
               Engineered for every environment.
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[#555c59] max-w-2xl leading-relaxed">
-              Specialized systems configured for maximum reliability across homes, offices, schools, and vehicle fleets.
+              Specialized systems configured for maximum reliability across homes, offices, schools, and jewelry showrooms.
             </p>
           </div>
 

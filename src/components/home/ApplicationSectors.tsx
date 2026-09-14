@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Home, Building, GraduationCap, Bus } from "lucide-react";
+import { Home, Building, GraduationCap, Gem } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { MotionFadeIn, MotionStaggerContainer, MotionStaggerItem } from "@/components/ui/MotionWrapper";
 
@@ -10,7 +10,7 @@ const sectorIcons = {
   home: Home,
   office: Building,
   school: GraduationCap,
-  bus: Bus,
+  jewelry: Gem,
 };
 
 export function ApplicationSectors() {
@@ -30,7 +30,7 @@ export function ApplicationSectors() {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-[#555c59] leading-relaxed">
-            Specialized systems configured for maximum reliability across homes, offices, schools, and vehicle fleets.
+            Specialized systems configured for maximum reliability across homes, offices, schools, and jewelry showrooms.
           </p>
         </MotionFadeIn>
 
