@@ -3,6 +3,7 @@
 import React from "react";
 import { Star, ExternalLink, Edit3, CheckCircle2 } from "lucide-react";
 import { reviewsData } from "@/data/reviews";
+import { siteConfig } from "@/data/site";
 
 // Official Google "G" Logo
 export function GoogleGIcon({ className = "w-5 h-5 shrink-0" }: { className?: string }) {
@@ -35,8 +36,7 @@ function GoogleStar() {
   );
 }
 
-const GOOGLE_REVIEW_URL =
-  "https://www.google.com/search?q=Defense+Security+Systems+Kollam+Reviews";
+const GOOGLE_REVIEW_URL = siteConfig.socials.google;
 
 export function ReviewsPreview() {
   return (

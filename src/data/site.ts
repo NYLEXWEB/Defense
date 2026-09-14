@@ -45,7 +45,8 @@ export const siteConfig = {
   ],
   socials: {
     instagram: "https://instagram.com/defense_security_kollam",
-    facebook: "https://facebook.com/defense_security_kollam",
+    facebook: "https://www.facebook.com/share/1DpGyrJV4H/",
+    google: "https://share.google/x5Q09Kmqxa2aOnG6F",
     handle: "defense_security_kollam",
   },
   areasServed: [

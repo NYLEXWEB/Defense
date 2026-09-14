@@ -116,7 +116,7 @@ const socialPlatforms = [
     actionText: "View Google Profile",
     badge: "Verified Profile",
     iconComponent: GoogleBadge,
-    url: "https://www.google.com/search?q=Defense+Security+Systems+Kollam",
+    url: siteConfig.socials.google,
     bgColor: "from-[#4285F4]/10 to-[#34A853]/5",
     borderColor: "hover:border-[#4285F4]/60",
     btnColor: "bg-[#4285F4] hover:bg-[#3367d6] text-white shadow-[#4285F4]/20",
