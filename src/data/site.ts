@@ -177,7 +177,7 @@ export const siteConfig = {
       id: "solar",
       title: "Solar System",
       tagline: "Solar Panel Installation & Energy Solutions",
-      image: "/images/sectors/solar.jpg",
+      image: "/images/sectors/solar-panel.jpg",
     },
   ],
   whyChooseUs: [

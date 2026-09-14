@@ -16,7 +16,7 @@ export function HeroSection() {
       {/* Mobile Background Image (No white fog) */}
       <div className="absolute inset-0 md:hidden z-0 w-full h-full">
         <Image
-          src="/images/hero-mobile.png"
+          src="/images/hero-mobile-back.png"
           alt="Defense CCTV Smart Security System - Mobile"
           fill
           priority
@@ -28,7 +28,7 @@ export function HeroSection() {
       {/* Desktop Background Image (Exact original) */}
       <div className="absolute inset-0 hidden md:block z-0 w-full h-full">
         <Image
-          src="/images/hero-desktop-background.png"
+          src="/images/hero-desktop.png"
           alt="Defense CCTV Smart Security System - Desktop"
           fill
           priority
