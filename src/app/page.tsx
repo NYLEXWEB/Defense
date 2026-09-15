@@ -16,7 +16,7 @@ import { FAQJsonLd } from "@/components/seo/JsonLd";
 import { homeFaqs } from "@/data/faq";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Best CCTV Camera Installation & Smart Security Systems in Kollam",
+  title: "Best CCTV Installation in Kollam, Kerala | Defense Security",
   description:
     "Defense Security Systems is Kollam's top-rated CCTV installation & electronic security provider. HD IP cameras, WiFi cameras, remote gate automation, and 24/7 technical service in Thevally, Kollam, Kerala.",
   canonicalPath: "/",

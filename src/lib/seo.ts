@@ -19,7 +19,7 @@ export function constructMetadata({
   noIndex = false,
 }: PageSeoProps): Metadata {
   const url = `${siteConfig.siteUrl}${canonicalPath.startsWith("/") ? canonicalPath : `/${canonicalPath}`}`;
-  const fullTitle = `${title} | ${siteConfig.name}`;
+  const fullTitle = title.includes("|") ? title : `${title} | ${siteConfig.name}`;
   const combinedKeywords = Array.from(
     new Set([...siteConfig.keywords, ...keywords])
   );
@@ -35,12 +35,15 @@ export function constructMetadata({
     publisher: siteConfig.name,
     icons: {
       icon: [
-        { url: "/newlogo.png", type: "image/png" },
-        { url: "/icon.png", type: "image/png" },
+        { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+        { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+        { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
         { url: "/favicon.ico", sizes: "any" },
       ],
-      shortcut: "/newlogo.png",
-      apple: [{ url: "/newlogo.png", type: "image/png" }],
+      shortcut: "/favicon-48x48.png",
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     },
     alternates: {
       canonical: url,

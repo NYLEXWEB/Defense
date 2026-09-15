@@ -33,7 +33,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: `Best CCTV Installation in Kollam, Kerala | Defense Security`,
+    default: "Best CCTV Installation in Kollam, Kerala | Defense Security",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     canonical: siteConfig.siteUrl,
   },
   openGraph: {
-    title: `${siteConfig.name} | Advanced CCTV Camera Systems & Installation Kollam`,
+    title: "Best CCTV Installation in Kollam, Kerala | Defense Security",
     description: siteConfig.description,
     url: siteConfig.siteUrl,
     siteName: siteConfig.name,
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Security Systems Kollam`,
+    title: "Best CCTV Installation in Kollam, Kerala | Defense Security",
     description: siteConfig.description,
     creator: `@${siteConfig.socials.handle}`,
   },
@@ -76,12 +76,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/newlogo.png", type: "image/png" },
-      { url: "/icon.png", type: "image/png" },
-      { url: "/favicon.ico" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
-    shortcut: "/newlogo.png",
-    apple: "/newlogo.png",
+    shortcut: "/favicon-48x48.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -96,9 +99,14 @@ export default function RootLayout({
       className={`h-full antialiased ${bebasNeue.variable} ${poppins.variable}`}
     >
       <head>
-        <link rel="icon" type="image/png" href="/newlogo.png" />
-        <link rel="shortcut icon" type="image/png" href="/newlogo.png" />
-        <link rel="apple-touch-icon" href="/newlogo.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon-48x48.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-white text-[#222524]">
         <LocalBusinessJsonLd />
