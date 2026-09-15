@@ -35,10 +35,12 @@ export function constructMetadata({
     publisher: siteConfig.name,
     icons: {
       icon: [
+        { url: "/newlogo.png", type: "image/png" },
         { url: "/icon.png", type: "image/png" },
         { url: "/favicon.ico", sizes: "any" },
       ],
-      apple: [{ url: "/apple-icon.png", type: "image/png" }],
+      shortcut: "/newlogo.png",
+      apple: [{ url: "/newlogo.png", type: "image/png" }],
     },
     alternates: {
       canonical: url,

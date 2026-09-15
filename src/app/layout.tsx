@@ -33,7 +33,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: `${siteConfig.name} | Best CCTV Installation & Security Systems in Kollam`,
+    default: `Best CCTV Installation in Kollam, Kerala | Defense Security`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -75,7 +75,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/newlogo.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/newlogo.png",
     apple: "/newlogo.png",
   },
 };
@@ -90,6 +95,11 @@ export default function RootLayout({
       lang="en"
       className={`h-full antialiased ${bebasNeue.variable} ${poppins.variable}`}
     >
+      <head>
+        <link rel="icon" type="image/png" href="/newlogo.png" />
+        <link rel="shortcut icon" type="image/png" href="/newlogo.png" />
+        <link rel="apple-touch-icon" href="/newlogo.png" />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-white text-[#222524]">
         <LocalBusinessJsonLd />
         <WebSiteJsonLd />
