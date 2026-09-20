@@ -5,6 +5,8 @@ export interface ServiceItem {
   description: string;
   image: string;
   iconName: string;
+  buttonText?: string;
+  buttonLink?: string;
 }
 
 export const servicesData: ServiceItem[] = [
@@ -15,6 +17,8 @@ export const servicesData: ServiceItem[] = [
     description: "Professional installation of CCTV systems",
     image: "/images/services/cctv-installation.jpg",
     iconName: "Camera",
+    buttonText: "CCTV Installation in Kollam",
+    buttonLink: "/cctv-installation-kollam",
   },
   {
     id: "system-design-and-integration",
@@ -23,6 +27,8 @@ export const servicesData: ServiceItem[] = [
     description: "Customized security solutions for your specific needs",
     image: "/images/services/system-design.jpg",
     iconName: "Settings",
+    buttonText: "System Design & Integration",
+    buttonLink: "/system-design-and-integration",
   },
   {
     id: "solar-system-installation",
@@ -31,6 +37,8 @@ export const servicesData: ServiceItem[] = [
     description: "Complete solar panel fitting, grid connections, and solar energy system maintenance for homes and commercial facilities.",
     image: "/images/sectors/solar-panel.jpg",
     iconName: "Sun",
+    buttonText: "Solar System Installation",
+    buttonLink: "/solar-system-installation",
   },
   {
     id: "maintenance-and-repair",
@@ -39,6 +47,8 @@ export const servicesData: ServiceItem[] = [
     description: "Regular maintenance and repair services for your CCTV and security systems",
     image: "/images/services/maintenance-repair.jpg",
     iconName: "Wrench",
+    buttonText: "Maintenance & Repair Services",
+    buttonLink: "/maintenance-and-repair",
   },
   {
     id: "monitoring-and-response",
@@ -47,6 +57,8 @@ export const servicesData: ServiceItem[] = [
     description: "24/7 monitoring and response services for your security system",
     image: "/images/services/monitoring-response.jpg",
     iconName: "Monitor",
+    buttonText: "24/7 Monitoring & Response",
+    buttonLink: "/monitoring-and-response",
   },
 ];
 

@@ -10,7 +10,7 @@ export interface GalleryItem {
 export const galleryImages: GalleryItem[] = [
   {
     id: "1",
-    src: "/images/gallery/cctv-camera-installation-thevally-kollam.png",
+    src: "/images/gallery/cctv-camera-installation-thevally-kollam.webp",
     title: "High-Definition IP CCTV Installation",
     category: "CCTV",
     description: "Professional high-definition IP camera positioning, weatherproofing, and conduit cable management for residential and commercial premises in Kollam.",
@@ -18,7 +18,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "2",
-    src: "/images/gallery/automatic-sliding-remote-gate-kollam.png",
+    src: "/images/gallery/automatic-sliding-remote-gate-kollam.webp",
     title: "Automatic Sliding Remote Gate Automation",
     category: "Gate Automation",
     description: "Heavy-duty motorized sliding remote gate automation setup with wireless remote controllers, safety optical sensors, and smartphone integration.",
@@ -26,7 +26,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "3",
-    src: "/images/gallery/multi-channel-nvr-surveillance-control-room.png",
+    src: "/images/gallery/multi-channel-nvr-surveillance-control-room.webp",
     title: "Commercial NVR Surveillance Control Station",
     category: "CCTV",
     description: "Multi-channel DVR and NVR central surveillance monitoring room with real-time HD video playback and remote backup storage.",
@@ -34,7 +34,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "4",
-    src: "/images/gallery/outdoor-weatherproof-night-vision-cctv-kollam.png",
+    src: "/images/gallery/outdoor-weatherproof-night-vision-cctv-kollam.webp",
     title: "Outdoor Weatherproof Color Night Vision Setup",
     category: "CCTV",
     description: "IP67 weatherproof color night vision surveillance cameras providing 24/7 crystal-clear perimeter defense in all Kerala weather conditions.",
@@ -42,7 +42,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "5",
-    src: "/images/gallery/structured-network-rack-poe-cabling-kerala.png",
+    src: "/images/gallery/structured-network-rack-poe-cabling-kerala.webp",
     title: "Structured Network Rack & PoE Cabling",
     category: "Networking",
     description: "Organized server rack cabling, gigabit PoE switches, fiber optic patch panels, and enterprise WiFi access points for seamless CCTV networking.",
@@ -50,7 +50,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "6",
-    src: "/images/gallery/wireless-smart-wifi-camera-mobile-viewing.png",
+    src: "/images/gallery/wireless-smart-wifi-camera-mobile-viewing.webp",
     title: "Smart WiFi Camera & Mobile App Live Viewing",
     category: "CCTV",
     description: "Wireless AI motion tracking smart WiFi camera configured for instant smartphone live view, two-way talk, and mobile alerts anywhere.",
@@ -58,7 +58,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "7",
-    src: "/images/gallery/hd-video-door-phone-intercom-system-kollam.png",
+    src: "/images/gallery/hd-video-door-phone-intercom-system-kollam.webp",
     title: "HD Video Door Phone & Intercom System",
     category: "Security Setup",
     description: "Touchscreen video door phone with wide-angle outdoor camera, electronic door lock release, and two-way audio intercom for modern homes.",
@@ -66,7 +66,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "8",
-    src: "/images/gallery/campus-institutional-cctv-surveillance-kerala.png",
+    src: "/images/gallery/campus-institutional-cctv-surveillance-kerala.webp",
     title: "Institutional Campus CCTV Security Network",
     category: "CCTV",
     description: "Comprehensive multi-zone camera coverage for educational institutions, colleges, and schools across Kollam with centralized recording.",
@@ -74,7 +74,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "9",
-    src: "/images/gallery/cctv-inverter-ups-power-backup-system.png",
+    src: "/images/gallery/cctv-inverter-ups-power-backup-system.webp",
     title: "Inverter UPS Power Backup & Surge Protection",
     category: "Security Setup",
     description: "Pure sine wave inverter and UPS power backup units ensuring uninterrupted 24/7 continuous recording during power outages.",
@@ -82,7 +82,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "10",
-    src: "/images/gallery/cctv-camera-mounting-technician-service-kollam.png",
+    src: "/images/gallery/cctv-camera-mounting-technician-service-kollam.webp",
     title: "Precision Camera Mounting & Angle Calibration",
     category: "Security Setup",
     description: "Expert technician mounting, focus adjustment, and precision blind-spot elimination for complete property surveillance.",

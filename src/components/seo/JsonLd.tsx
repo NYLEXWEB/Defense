@@ -184,6 +184,58 @@ export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
   );
 }
 
+export function ServiceJsonLd({
+  name,
+  description,
+  url,
+  serviceType = "CCTV & Electronic Security Installation",
+  areaServed = "Kollam, Kerala",
+}: {
+  name: string;
+  description: string;
+  url: string;
+  serviceType?: string;
+  areaServed?: string;
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${url}/#service`,
+    name,
+    description,
+    url,
+    serviceType,
+    provider: {
+      "@id": `${siteConfig.siteUrl}/#localbusiness`,
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: areaServed,
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: name,
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: name,
+            description: description,
+          },
+        },
+      ],
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export function ServiceListJsonLd({
   services,
 }: {
@@ -217,3 +269,4 @@ export function ServiceListJsonLd({
     />
   );
 }
+

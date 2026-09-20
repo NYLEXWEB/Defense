@@ -4,6 +4,7 @@ export interface ProductItem {
   description: string;
   image: string;
   whatsappMessage: string;
+  href?: string;
 }
 
 export const productsData: ProductItem[] = [
@@ -13,6 +14,7 @@ export const productsData: ProductItem[] = [
     description: "Indoor & outdoor IP/HD cameras, wireless WiFi smart cameras, and digital DVR/NVR video recorders for complete premises surveillance.",
     image: "/images/products/cctv-ip-hd.png",
     whatsappMessage: "Hi Defense Security, I am interested in CCTV Cameras, WiFi Cameras, and DVR/NVR Surveillance Systems. Please share pricing and details.",
+    href: "/cctv-camera",
   },
   {
     id: "solar-systems",
@@ -20,6 +22,7 @@ export const productsData: ProductItem[] = [
     description: "On-grid & off-grid solar panel installations, solar power connections, and energy maintenance services for residential & commercial properties.",
     image: "/images/sectors/solar-panel.jpg",
     whatsappMessage: "Hi Defense Security, I am interested in Solar Systems & Solar Panel Installation services. Please share pricing and details.",
+    href: "/solar-system-installation",
   },
   {
     id: "video-door-phones",
@@ -27,6 +30,7 @@ export const productsData: ProductItem[] = [
     description: "Video door phones enhance security with video, voice and audio communication",
     image: "/images/products/video-door-phones.jpg",
     whatsappMessage: "Hi Defense Security, I am interested in Video Door Phone intercom systems. Please share pricing and details.",
+    href: "/video-door-phone",
   },
   {
     id: "wifi-network",
@@ -34,6 +38,7 @@ export const productsData: ProductItem[] = [
     description: "WiFi networking enables wireless internet connectivity",
     image: "/images/products/wifi-network.jpg",
     whatsappMessage: "Hi Defense Security, I am interested in WiFi Network solutions. Please share pricing and details.",
+    href: "/networking-solutions",
   },
   {
     id: "remote-gate",
@@ -41,6 +46,7 @@ export const productsData: ProductItem[] = [
     description: "A Remote gate to control access from anywhere with just a touch",
     image: "/images/products/remote-gate.jpg",
     whatsappMessage: "Hi Defense Security, I am interested in Motorized Remote Gate automation. Please share pricing and details.",
+    href: "/gate-automation",
   },
   {
     id: "inverter-system",
@@ -48,6 +54,7 @@ export const productsData: ProductItem[] = [
     description: "Efficient inverter systems optimize energy usage, reduce consumption, and save costs.",
     image: "/images/products/inverter-system.jpg",
     whatsappMessage: "Hi Defense Security, I am interested in Inverter & Solar Power Backup systems. Please share pricing and details.",
+    href: "/inverter-system",
   },
   {
     id: "home-automation",
@@ -55,5 +62,7 @@ export const productsData: ProductItem[] = [
     description: "Home automation enhances convenience, security, and energy efficiency effortlessly.",
     image: "/images/products/home-automation.jpg",
     whatsappMessage: "Hi Defense Security, I am interested in Smart Home Automation solutions. Please share pricing and details.",
+    href: "/home-automation",
   },
 ];
+

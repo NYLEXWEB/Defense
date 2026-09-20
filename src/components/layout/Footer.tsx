@@ -78,15 +78,57 @@ export function Footer() {
           {/* Col 3: Solutions & Offerings */}
           <div className="lg:col-span-3 space-y-4">
             <p className="text-xs font-bold uppercase tracking-wider text-[#00C689]">
-              Security Range
+              Surveillance Solutions
             </p>
             <ul className="space-y-2 text-sm text-neutral-300">
-              {siteConfig.overviewItems.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]/60" />
-                  <span>{item}</span>
-                </li>
-              ))}
+              <li>
+                <Link href="/cctv-installation-kollam" className="hover:text-[#00C689] transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
+                  <span>CCTV Installation Kollam</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/cctv-camera" className="hover:text-[#00C689] transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
+                  <span>IP &amp; WiFi Security Cameras</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/dvr-nvr" className="hover:text-[#00C689] transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
+                  <span>DVR &amp; NVR Storage Setup</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/access-control" className="hover:text-[#00C689] transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
+                  <span>Biometric Access Control</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/video-door-phone" className="hover:text-[#00C689] transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
+                  <span>Smart Video Door Phones</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/gate-automation" className="hover:text-[#00C689] transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
+                  <span>Automatic Remote Gates</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/home-automation" className="hover:text-[#00C689] transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
+                  <span>Smart Home Automation</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/networking-solutions" className="hover:text-[#00C689] transition-colors flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00C689]" />
+                  <span>Structured Network Cabling</span>
+                </Link>
+              </li>
             </ul>
           </div>
 

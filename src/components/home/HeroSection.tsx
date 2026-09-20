@@ -16,7 +16,7 @@ export function HeroSection() {
       {/* Mobile Background Image (No white fog) */}
       <div className="absolute inset-0 md:hidden z-0 w-full h-full">
         <Image
-          src="/images/hero-mobile-back.png"
+          src="/images/hero-mobile-back.webp"
           alt="Defense CCTV Smart Security System - Mobile"
           fill
           priority
@@ -28,7 +28,7 @@ export function HeroSection() {
       {/* Desktop Background Image (Exact original) */}
       <div className="absolute inset-0 hidden md:block z-0 w-full h-full">
         <Image
-          src="/images/hero-desktop.png"
+          src="/images/hero-desktop.webp"
           alt="Defense CCTV Smart Security System - Desktop"
           fill
           priority
@@ -41,17 +41,23 @@ export function HeroSection() {
 
       {/* Hero Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        {/* Semantic H1 for SEO & Accessibility */}
+        <h1 className="sr-only">CCTV Installation &amp; Security Systems in Kollam, Kerala | Defense Security Systems</h1>
+
         {/* MOBILE VIEW (320px - 767px) */}
         <div className="block md:hidden w-full max-w-[280px] xs:max-w-[310px] sm:max-w-md space-y-4">
           <MotionFadeIn delay={0.1} distance={20} duration={0.85}>
-            <h1 className="font-heading uppercase tracking-tight text-[#111815] leading-[0.92] text-[44px] xs:text-5xl sm:text-6xl">
+            <div className="inline-block bg-[#00C689]/15 border border-[#00C689]/40 px-3 py-1 rounded-full text-[11px] font-bold text-[#008D62] uppercase tracking-wider mb-2">
+              CCTV Installation in Kollam
+            </div>
+            <h2 className="font-heading uppercase tracking-tight text-[#111815] leading-[0.92] text-[44px] xs:text-5xl sm:text-6xl">
               <span className="block text-[#111815]">PROTECTING</span>
               <span className="block text-[#00C689]">WHAT</span>
               <span className="block text-[#00C689]">MATTERS</span>
               <span className="block text-[#111815]">
                 MOST<span className="text-[#838b88]">.</span>
               </span>
-            </h1>
+            </h2>
           </MotionFadeIn>
 
           <MotionFadeIn delay={0.22} distance={18} duration={0.8}>
@@ -63,10 +69,10 @@ export function HeroSection() {
           <MotionFadeIn delay={0.34} distance={16} duration={0.75}>
             <div className="flex flex-col gap-2.5 xs:gap-3 pt-1 w-full max-w-[260px] xs:max-w-[270px]">
               <Link
-                href="/products"
+                href="/cctv-installation-kollam"
                 className="inline-flex items-center justify-between gap-3 px-4.5 xs:px-5 py-2.5 xs:py-3 rounded-full bg-[#00C689] hover:bg-[#008D62] text-white font-semibold text-xs transition-all shadow-sm active:scale-95 group shine-btn"
               >
-                <span>Explore Solutions</span>
+                <span>CCTV Installation Kollam</span>
                 <span className="w-7 h-7 rounded-full bg-white/25 flex items-center justify-center shrink-0 transition-transform group-hover:translate-x-0.5">
                   <ArrowRight className="w-3.5 h-3.5 text-white" />
                 </span>
@@ -76,7 +82,7 @@ export function HeroSection() {
                 href="/contact"
                 className="inline-flex items-center justify-between gap-3 px-4.5 xs:px-5 py-2.5 xs:py-3 rounded-full bg-white hover:bg-neutral-50 text-[#111815] border border-neutral-200 shadow-2xs font-semibold text-xs transition-all active:scale-95 group"
               >
-                <span>Get in Touch</span>
+                <span>Get Free Quote</span>
                 <span className="w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center shrink-0">
                   <MessageSquare className="w-3.5 h-3.5 text-[#222524]" />
                 </span>
@@ -88,7 +94,11 @@ export function HeroSection() {
         {/* DESKTOP VIEW (Exact Original Design & Hierarchy) */}
         <div className="hidden md:block max-w-2xl space-y-5 sm:space-y-7">
           <MotionFadeIn delay={0.1} distance={20} duration={0.85}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight text-[#222524] leading-[1.08]">
+            <div className="inline-flex items-center gap-2 bg-[#00C689]/15 border border-[#00C689]/40 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#008D62] uppercase tracking-wider mb-2">
+              <span className="w-2 h-2 rounded-full bg-[#00C689] animate-pulse" />
+              <span>CCTV Installation &amp; Security Systems in Kollam</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight text-[#222524] leading-[1.08]">
               Protecting{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 text-[#008D62]">
@@ -97,7 +107,7 @@ export function HeroSection() {
                 <span className="absolute bottom-1.5 left-0 right-0 h-3 sm:h-4 bg-[#00C689]/25 -rotate-1 rounded-sm -z-0" />
               </span>{" "}
               Most.
-            </h1>
+            </h2>
           </MotionFadeIn>
 
           <MotionFadeIn delay={0.22} distance={18} duration={0.8}>
@@ -108,12 +118,12 @@ export function HeroSection() {
 
           <MotionFadeIn delay={0.34} distance={16} duration={0.75}>
             <div className="flex flex-row items-center gap-3.5 pt-2">
-              <Button href="/products" size="lg" variant="primary">
-                <span>Explore Solutions</span>
+              <Button href="/cctv-installation-kollam" size="lg" variant="primary">
+                <span>CCTV Installation Kollam</span>
                 <ArrowRight className="w-4 h-4" />
               </Button>
               <Button href="/contact" size="lg" variant="secondary">
-                <span>Get in Touch</span>
+                <span>Get Free Quote</span>
               </Button>
             </div>
           </MotionFadeIn>

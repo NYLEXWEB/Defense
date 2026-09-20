@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { productsData } from "@/data/products";
@@ -48,29 +49,45 @@ export function ProductsPreview() {
                   />
                 </div>
 
-                {/* Product Info & WhatsApp Enquiry */}
+                {/* Product Info & Actions */}
                 <div className="flex-1 flex flex-col justify-between text-center sm:text-left">
                   <div>
-                    <h3 className="text-lg sm:text-xl font-extrabold text-[#222524] tracking-tight uppercase group-hover:text-[#008D62] transition-colors duration-300">
-                      {product.name}
-                    </h3>
+                    {product.href ? (
+                      <Link href={product.href}>
+                        <h3 className="text-lg sm:text-xl font-extrabold text-[#222524] tracking-tight uppercase group-hover:text-[#008D62] transition-colors duration-300 hover:underline">
+                          {product.name}
+                        </h3>
+                      </Link>
+                    ) : (
+                      <h3 className="text-lg sm:text-xl font-extrabold text-[#222524] tracking-tight uppercase group-hover:text-[#008D62] transition-colors duration-300">
+                        {product.name}
+                      </h3>
+                    )}
                     <p className="text-xs sm:text-sm text-[#555c59] leading-relaxed mt-1.5 whitespace-pre-line">
                       {product.description}
                     </p>
                   </div>
 
-                  {/* Stylish WhatsApp Enquiry Button with subtle shine sweep */}
-                  <div className="pt-4">
+                  {/* Actions */}
+                  <div className="pt-4 flex flex-wrap items-center gap-2.5 justify-center sm:justify-start">
+                    {product.href && product.href !== "/contact" && (
+                      <Link
+                        href={product.href}
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#06221a] bg-neutral-100 hover:bg-[#00C689]/20 hover:text-[#008D62] border border-neutral-200 transition-all duration-300"
+                      >
+                        <span>View Details</span>
+                        <ArrowRight className="w-3 h-3 text-[#00C689]" />
+                      </Link>
+                    )}
                     <a
                       href={`https://wa.me/917025552265?text=${encodeURIComponent(product.whatsappMessage)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-white bg-[#25D366] hover:bg-[#1faa53] shadow-sm hover:shadow-md transition-all duration-300 active:scale-95 group/btn shine-btn hover:-translate-y-0.5"
+                      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-[#25D366] hover:bg-[#1faa53] shadow-sm hover:shadow-md transition-all duration-300 active:scale-95 group/btn shine-btn"
                       aria-label={`Enquire about ${product.name} on WhatsApp`}
                     >
-                      <FaWhatsapp className="w-4 h-4 text-white shrink-0" />
-                      <span>Enquire on WhatsApp</span>
-                      <ArrowRight className="w-3.5 h-3.5 opacity-80 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      <FaWhatsapp className="w-3.5 h-3.5 text-white shrink-0" />
+                      <span>WhatsApp</span>
                     </a>
                   </div>
                 </div>

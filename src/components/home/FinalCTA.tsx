@@ -37,21 +37,21 @@ export function FinalCTA() {
               onClick={() => setIsModalOpen(true)}
               className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white border-2 border-[#00C689]/30 shadow-xl hover:shadow-2xl cursor-pointer transition-all duration-500 group-hover:-translate-y-1 p-1 sm:p-2"
             >
-              {/* 1. Mobile Viewport (< md): Full portrait 7.webp image with natural height & high legibility */}
+              {/* 1. Mobile Viewport (< md): Full portrait consultation mobile image with natural height & high legibility */}
               <div className="block md:hidden w-full overflow-hidden rounded-xl bg-white">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/7.webp"
+                  src="/images/defense-security-systems-kollam-cctv-consultation-mobile.webp"
                   alt="Defense Security Official Client Reviews & Profile Page - Mobile View"
                   className="w-full h-auto block rounded-xl transform group-hover:scale-[1.01] transition-transform duration-500"
                 />
               </div>
 
-              {/* 2. Desktop/Laptop Viewport (>= md): Full landscape 7 mobile.png image fully uncropped (100% top-to-bottom & left-to-right visible) */}
+              {/* 2. Desktop/Laptop Viewport (>= md): Full landscape consultation desktop image fully uncropped */}
               <div className="hidden md:block w-full overflow-hidden rounded-2xl bg-white">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/7 mobile.png"
+                  src="/images/defense-security-systems-kollam-cctv-consultation-desktop.webp"
                   alt="Defense Security Official Client Reviews & Profile Page - Desktop Landscape View"
                   className="w-full h-auto block rounded-2xl transform group-hover:scale-[1.01] transition-transform duration-500"
                 />
@@ -119,7 +119,7 @@ export function FinalCTA() {
                 <div className="block md:hidden w-full max-h-[85vh] overflow-y-auto">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/7.webp"
+                    src="/images/defense-security-systems-kollam-cctv-consultation-mobile.webp"
                     alt="Defense Security Official Client Reviews & Profile Page - Full View"
                     className="w-full h-auto block rounded-xl"
                   />
@@ -129,7 +129,7 @@ export function FinalCTA() {
                 <div className="hidden md:block w-full max-h-[85vh] overflow-y-auto">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/7 mobile.png"
+                    src="/images/defense-security-systems-kollam-cctv-consultation-desktop.webp"
                     alt="Defense Security Official Client Reviews & Profile Page - Full Desktop View"
                     className="w-full h-auto block rounded-2xl"
                   />

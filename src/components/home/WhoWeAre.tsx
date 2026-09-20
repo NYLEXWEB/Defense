@@ -86,14 +86,20 @@ export function WhoWeAre() {
               </p>
             </div>
 
-            {/* Bottom Button: View More / More About Us */}
-            <div className="pt-2">
+            {/* Bottom Button: View More / More About Us & CCTV Installation */}
+            <div className="pt-2 flex flex-wrap items-center gap-3">
+              <Link
+                href="/cctv-installation-kollam"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold bg-[#00C689] text-[#06221a] hover:bg-[#008D62] hover:text-white transition-all shadow-md active:scale-95 shine-btn"
+              >
+                <span>CCTV Installation Kollam</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-bold bg-[#06221a] text-white hover:bg-[#008D62] transition-all shadow-md active:scale-95 shine-btn"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold bg-[#06221a] text-white hover:bg-neutral-800 transition-all shadow-sm active:scale-95"
               >
-                <span>More About Us</span>
-                <ArrowRight className="w-4 h-4 text-[#00C689]" />
+                <span>About Defense</span>
               </Link>
             </div>
           </MotionFadeIn>
@@ -125,7 +131,7 @@ export function WhoWeAre() {
 
               <div className="relative w-full h-full max-h-[85vh] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/About/IMG-20250103-WA0105.jpg"
+                  src="/images/about/defense-security-systems-thevally-kollam-cctv-flyer.jpg"
                   alt="Defense Security Official Flyer Full View"
                   fill
                   className="object-contain"

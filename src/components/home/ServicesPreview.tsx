@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Camera, Settings, Wrench, Tv, Sun } from "lucide-react";
 import { servicesData } from "@/data/services";
 import { MotionFadeIn } from "@/components/ui/MotionWrapper";
@@ -90,10 +91,22 @@ export function ServicesPreview() {
                         <p className="text-sm sm:text-base text-[#555c59] leading-relaxed max-w-md">
                           {service.description}
                         </p>
+
+                        {service.buttonText && service.buttonLink && (
+                          <div className="pt-2">
+                            <Link
+                              href={service.buttonLink}
+                              className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full text-xs font-bold bg-[#00C689] text-[#06221a] hover:bg-[#008D62] hover:text-white transition-all shadow-xs"
+                            >
+                              <span>{service.buttonText}</span>
+                              <Icon className="w-3.5 h-3.5" />
+                            </Link>
+                          </div>
+                        )}
                       </div>
                     </>
                   ) : (
-                    /* When image is on Right (Rows 1 & 3) */
+                    /* When image is on Right (Rows 1, 3, 5) */
                     <>
                       {/* Text Column */}
                       <div className="md:col-span-5 space-y-3 text-left">
@@ -111,6 +124,18 @@ export function ServicesPreview() {
                         <p className="text-sm sm:text-base text-[#555c59] leading-relaxed max-w-md">
                           {service.description}
                         </p>
+
+                        {service.buttonText && service.buttonLink && (
+                          <div className="pt-2">
+                            <Link
+                              href={service.buttonLink}
+                              className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full text-xs font-bold bg-[#00C689] text-[#06221a] hover:bg-[#008D62] hover:text-white transition-all shadow-xs"
+                            >
+                              <span>{service.buttonText}</span>
+                              <Icon className="w-3.5 h-3.5" />
+                            </Link>
+                          </div>
+                        )}
                       </div>
 
                       {/* Central Icon Chip */}
