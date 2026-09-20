@@ -202,7 +202,7 @@ export default function CctvInstallationKollamPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 text-white">
                   <p className="text-xs font-mono text-[#00C689] uppercase tracking-wider">
-                    Defense Security Systems • Thevally, Kollam
+                    Defense Security Systems • Thevally,Kollam
                   </p>
                   <p className="text-sm font-bold mt-1">
                     Certified Installation &amp; Smart Mobile Surveillance Setup
