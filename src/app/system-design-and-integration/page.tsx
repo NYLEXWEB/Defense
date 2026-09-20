@@ -3,16 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  Settings,
   CheckCircle2,
   Phone,
   ArrowRight,
   Layers,
   Cpu,
-  ShieldCheck,
   Server,
-  Network,
-  Eye,
   HelpCircle,
 } from "lucide-react";
 import { siteConfig } from "@/data/site";

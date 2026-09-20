@@ -1,14 +1,11 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
   HardDrive,
-  CheckCircle2,
   Phone,
   ArrowRight,
   Server,
-  Layers,
   Cpu,
   ShieldCheck,
 } from "lucide-react";

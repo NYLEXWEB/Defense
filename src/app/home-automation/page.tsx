@@ -3,14 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  Home,
-  CheckCircle2,
   Phone,
   ArrowRight,
   Lightbulb,
   Smartphone,
   Shield,
-  Sparkles,
 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { constructMetadata } from "@/lib/seo";

@@ -3,19 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  ShieldCheck,
   Camera,
   CheckCircle2,
   Phone,
   ArrowRight,
-  Wrench,
   Smartphone,
   HardDrive,
-  Eye,
-  Layers,
   MapPin,
-  Clock,
-  Award,
   HelpCircle,
 } from "lucide-react";
 import { siteConfig } from "@/data/site";

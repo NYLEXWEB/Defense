@@ -3,15 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  Zap,
   BatteryCharging,
   CheckCircle2,
   Phone,
   ArrowRight,
-  ShieldCheck,
   Server,
   Home,
-  Building,
   HelpCircle,
 } from "lucide-react";
 import { siteConfig } from "@/data/site";

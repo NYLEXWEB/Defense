@@ -3,16 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  Camera,
-  ShieldCheck,
   CheckCircle2,
   Phone,
   ArrowRight,
   Eye,
   Wifi,
   Moon,
-  Smartphone,
-  Layers,
 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { constructMetadata } from "@/lib/seo";

@@ -3,12 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  Video,
-  CheckCircle2,
   Phone,
   ArrowRight,
   Smartphone,
-  ShieldCheck,
   Lock,
   Volume2,
 } from "lucide-react";

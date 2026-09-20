@@ -3,15 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  Wrench,
   CheckCircle2,
   Phone,
   ArrowRight,
-  ShieldCheck,
   AlertTriangle,
   HardDrive,
-  Cpu,
-  Clock,
   RotateCcw,
   HelpCircle,
 } from "lucide-react";

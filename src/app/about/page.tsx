@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Target, Compass, ArrowRight, Home, Building, GraduationCap, Gem, Sun, CheckCircle2 } from "lucide-react";
+import { Target, Compass, ArrowRight, Home, Building, GraduationCap, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { constructMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
