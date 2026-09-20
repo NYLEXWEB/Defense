@@ -11,7 +11,7 @@ export interface ServiceItem {
 
 export const servicesData: ServiceItem[] = [
   {
-    id: "cctv-installation",
+    id: "cctv-installation-",
     number: "01",
     title: "CCTV Installation",
     description: "Professional installation of CCTV systems",
